@@ -1003,7 +1003,7 @@ function startfight(){
     }
        
     function castHealPowreduce(){
-      nerfHealPow = 1000;
+      nerfHealPow = 999999991000;
       function HealPowreduceremove(){
         nerfHealPow=0;
       }
@@ -1013,7 +1013,7 @@ function startfight(){
 
 
     function castIceDMGreduce(){
-      nerfIceDMG = 1000;
+      nerfIceDMG = 999991000;
       function IceDMGreduceremove(){
         nerfIceDMG=0;
       }
@@ -1023,7 +1023,7 @@ function startfight(){
 
 
     function castFireDMGreduce(){
-      nerfFireDMG = 1000;
+      nerfFireDMG = 9999991000;
       function FireDMGreduceremove(){
         nerfFireDMG=0;
       }
@@ -1032,7 +1032,7 @@ function startfight(){
     }
 
     function castStormDMGreduce(){
-      nerfStormDMG = 1000;
+      nerfStormDMG = 9999991000;
       function StormDMGreduceremove(){
         nerfStormDMG=0;
       }
@@ -1041,7 +1041,7 @@ function startfight(){
     }
 
     function castShadowDMGreduce(){
-      nerfShadowDMG = 1000;
+      nerfShadowDMG = 9999991000;
       function ShadowDMGreduceremove(){
         nerfShadowDMG=0;
       }
@@ -1050,7 +1050,7 @@ function startfight(){
     }
 
     function castNatureDMGreduce(){
-      nerfNatureDMG = 1000;
+      nerfNatureDMG = 9999991000;
       function NatureDMGreduceremove(){
         nerfNatureDMG=0;
       }
@@ -1059,7 +1059,7 @@ function startfight(){
     }
 
     function castBloodDMGreduce(){
-      nerfBloodDMG = 1000;
+      nerfBloodDMG = 9999991000;
       function BloodDMGreduceremove(){
         nerfBloodDMG=0;
       }
