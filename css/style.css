@@ -1,0 +1,2562 @@
+#main {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#centerinfo{
+  overflow-y: scroll;
+}
+
+#statnum {
+  margin-left: 20px;
+  margin-top: 5px;
+
+}
+
+
+#gold{
+  position:absolute;
+  margin-top:80px;
+  margin-left:20px;
+}
+#level{
+  position:absolute;
+  margin-top:100px;
+  margin-left:20px;
+}
+
+#upgradeinfo{
+  position:absolute;
+  width:210px;
+  height:160px;
+  margin-left:90px;
+  margin-top:200px;
+  padding:10px;
+ }
+
+#buttonwrapper{
+  margin:0 auto;
+  width:666px;
+
+}
+#bosslevel{
+position:absolute;
+margin-left:405px;
+margin-top:167px;
+}
+
+.ui-effects-wrapper {
+        display:inline;
+        position:absolute;
+    }
+
+
+#desc{
+position:absolute;
+  display:none;
+  border: 2px solid #333;
+}
+.spelldesc{
+  padding-left:10px;
+  background-color:#24303E;
+}
+
+.Common {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.Magic {
+  border-color: #1eff00;
+  color: #1eff00;
+}
+
+.Rare {
+  border-color: #0070dd;
+  color: #0070dd;
+}
+
+.Epic {
+  border-color: #a335ee;
+  color: #a335ee;
+}
+
+.Legendary {
+  border-color: #ff8000;
+  color: #ff8000;
+}
+
+#barnum {
+  position: absolute;
+}
+
+.selected {
+  outline: 5px solid green;
+}
+
+#showdiv1 {
+  border: solid 5px #222;
+  width: 100px;
+  height: auto;
+  position: absolute;
+  background-color: #24303E;
+  display: none;
+}
+
+#playerstats {
+  padding: 5px;
+  width: 222px;
+  height: 222px;
+  background-color: #24303E;
+  border: 0px solid #333;
+}
+
+#stattable {
+  border: 0px solid #333;
+  background-color: #24303E;
+}
+
+#fire, #ice, #storm, #nature, #shadow, #blood, #lifesteal {
+  float: right;
+  padding-right: 5px;
+}
+
+#health, #mana, #critical, #dodge, #damage, #healpow, #magicpow {
+  float: left;
+  padding-left: 5px;
+}
+#spelldesc{
+  display:none;
+  position: absolute;
+  width:1000px;
+  height:600px;
+  background-color:#24303E;
+  border: 0px solid #333;
+}
+.statnum {
+  width: 90px;
+  height: 30px;
+}
+
+.characterslot {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #BF942C;
+  width: 53px;
+  height: 53px;
+  background-color: #8F5D38;
+  display: fixed;
+  background: url("http://res.cloudinary.com/treborx555/image/upload/v1472064620/gui_xyicsn.png");
+  background-size: 53px;
+}
+
+#showdiv {
+  border: solid 5px #222;
+  width: 100px;
+  height: auto;
+  position: absolute;
+  background-color: #24303E;
+  display: none;
+}
+
+.line {
+  height: 18px;
+}
+
+p {
+  height: 11px;
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+  text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, 0px 1px 0 #000, 0px -1px 0 #000, -1px 0px 0 #000, 1px 0px 0 #000, 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000, 0px 2px 0 #000, 0px -2px 0 #000, -2px 0px 0 #000, 2px 0px 0 #000, 1px 2px 0 #000, -1px 2px 0 #000, 1px -2px 0 #000, -1px -2px 0 #000, 2px 1px 0 #000, -2px 1px 0 #000, 2px -1px 0 #000, -2px -1px 0 #000;
+  font-weight: bold;
+}
+
+#stats1 {
+  width: 20%;
+  height: 100%;
+  padding-top: 10px;
+}
+
+#stats2 {
+  width: 20%;
+  height: 100%;
+  float: right;
+  text-align: right;
+  padding-top: 10px;
+}
+
+#boxy {
+  width: 865px;
+  height: 216px;
+  background: url("http://res.cloudinary.com/treborx555/image/upload/v1472066255/texture_xhoaxc.png");
+  border: 10px solid #333;
+  margin-left: 38px;
+}
+
+#box {
+  margin-top: 5px;
+  width: 100%;
+  height: 150px;
+}
+
+#screen {
+  width: 865px;
+  height: 381px;
+  background-color: #24303E;
+  border: 10px solid #333;
+  position: block;
+  float: left;
+  background-size: 100px;
+}
+
+#inventory {
+  float: left;
+}
+
+#info {
+  height: 381px;
+  width: 222px;
+  background-color: #24303E;
+  border: 5px solid #333;
+  padding-left: 5px;
+  float: left;
+  margin-left: 83px;
+  border: 10px solid #333;
+}
+
+.slot {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #BF942C;
+  width: 53px;
+  height: 53px;
+  background-color: #8F5D38;
+  display: fixed;
+  background: url("http://res.cloudinary.com/treborx555/image/upload/v1472064620/gui_xyicsn.png");
+  background-size: 53px;
+}
+
+.statslot {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #BF942C;
+  width: 30px;
+  height: 30px;
+  background-color: #8F5D38;
+  display: fixed;
+}
+
+.spellslot {
+  border: 3px solid #333;
+  background-color: #24303E;
+  width: 60px;
+  height: 60px;
+}
+
+#spellslots {
+  border: 3px solid teal;
+  outline: 5px solid #333;
+  margin: 0 auto;
+}
+
+.item {
+  max-width: 45px;
+  max-height: 45px;
+  border-width: 3.5px;
+  border-style: solid;
+  vertical-align: middle;
+  margin: 0 auto;
+}
+
+body {
+  padding: 10px;
+  background-color: #222;
+  width: 100%;
+  height: 100vh;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/a/a2/San_Raphael_Grasslands_(4412326574).jpg");
+  background-size: 100vw;
+  max-height: 765px;
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+table {
+  background-color: #333;
+  border: 10px solid #333;
+}
+
+#battle {
+  width: 100%;
+  height: 300px;
+}
+
+#boss {
+  margin: 0 auto;
+  height: 150px;
+  width: 125px;
+  outline: 0px solid white;
+  border: 5px solid #24303E;
+  background-color: #24303E;
+  margin-top: 20px;
+  margin-bottom:35px;
+}
+
+#bosshptext{
+  padding-top:10px;
+}
+
+#bosshpbar {
+  width: 100%;
+  height: 30px;
+  background: url("http://res.cloudinary.com/treborx555/image/upload/v1472309979/red_ukpo3h.jpg");
+  float: left;
+}
+
+#totalbosshpbar {
+  width: 845px;
+  height: 30px;
+  background-color: black;
+  outline: 4px solid darkred;
+}
+
+
+#totalplayerhpbar {
+  width: 845px;
+  height: 20px; 
+  background-color: black;
+  }
+
+#totalplayermanabar {
+  width: 845px;
+  height: 20px;  
+  background-color: black;
+ 
+  }
+
+
+#playermanabar {
+  width: 100%;
+  height: 20px;
+  background: url("http://res.cloudinary.com/treborx555/image/upload/v1472309979/dblue168_zjpw0l.jpg");
+  background-size:150px;
+  border:5px solid #333;
+  
+  top:0;
+}
+#playerhpbar {
+  width: 100%;
+  height: 20px;
+  background: url("http://res.cloudinary.com/treborx555/image/upload/v1472309979/red_ukpo3h.jpg");
+  background-size:150px;
+  border:5px solid #333;  
+  
+
+}
+#leftinfo{
+  height:180px;
+  width:300px; 
+  border:5px solid #333;
+  overflow-y:scroll;
+  margin-top:15px;
+  float:left;
+  
+}
+::-webkit-scrollbar { 
+    display: none; 
+}
+#rightinfo{
+
+  height:180px;
+  width:300px;
+  border:5px solid #333;
+  overflow-y:scroll;
+  float:right;
+  margin-top:15px;
+  text-align:right;
+}
+
+
+.oncooldown {
+  opacity: 0.1;
+}
+
+#spellchild {
+  margin: 0 auto;
+  border: solid 2px #BF942C;
+}
+
+#character {
+  float: right;
+}
+
+.sprite {
+  background: url("http://res.cloudinary.com/treborx555/image/upload/v1472148365/spritesheet_2_oqummc.png");
+  display: block;
+  background-repeat: no-repeat;
+}
+
+.book-10 {
+  width: 48px;
+  height: 48px;
+  background-position: 0 0;
+}
+
+.book-11 {
+  width: 48px;
+  height: 48px;
+  background-position: -48px 0;
+}
+
+.book-1 {
+  width: 48px;
+  height: 48px;
+  background-position: -96px 0;
+}
+
+.book-2 {
+  width: 48px;
+  height: 48px;
+  background-position: -144px 0;
+}
+
+.book-3 {
+  width: 48px;
+  height: 48px;
+  background-position: -192px 0;
+}
+
+.book-4 {
+  width: 48px;
+  height: 48px;
+  background-position: -240px 0;
+}
+
+.book-5 {
+  width: 48px;
+  height: 48px;
+  background-position: -288px 0;
+}
+
+.book-6 {
+  width: 48px;
+  height: 48px;
+  background-position: -336px 0;
+}
+
+.book-7 {
+  width: 48px;
+  height: 48px;
+  background-position: -384px 0;
+}
+
+.book-8 {
+  width: 48px;
+  height: 48px;
+  background-position: -432px 0;
+}
+
+.book-9 {
+  width: 48px;
+  height: 48px;
+  background-position: -480px 0;
+}
+
+.boot-10 {
+  width: 48px;
+  height: 48px;
+  background-position: -528px 0;
+}
+
+.boot-1 {
+  width: 48px;
+  height: 48px;
+  background-position: -576px 0;
+}
+
+.boot-2 {
+  width: 48px;
+  height: 48px;
+  background-position: -624px 0;
+}
+
+.boot-3 {
+  width: 48px;
+  height: 48px;
+  background-position: 0 -48px;
+}
+
+.boot-4 {
+  width: 48px;
+  height: 48px;
+  background-position: -48px -48px;
+}
+
+.boot-5 {
+  width: 48px;
+  height: 48px;
+  background-position: -96px -48px;
+}
+
+.boot-6 {
+  width: 48px;
+  height: 48px;
+  background-position: -144px -48px;
+}
+
+.boot-7 {
+  width: 48px;
+  height: 48px;
+  background-position: -192px -48px;
+}
+
+.boot-8 {
+  width: 48px;
+  height: 48px;
+  background-position: -240px -48px;
+}
+
+.boot-9 {
+  width: 48px;
+  height: 48px;
+  background-position: -288px -48px;
+}
+
+.wrist-10 {
+  width: 48px;
+  height: 48px;
+  background-position: -336px -48px;
+}
+
+.wrist-11 {
+  width: 48px;
+  height: 48px;
+  background-position: -384px -48px;
+}
+
+.wrist-12 {
+  width: 48px;
+  height: 48px;
+  background-position: -432px -48px;
+}
+
+.wrist-13 {
+  width: 48px;
+  height: 48px;
+  background-position: -480px -48px;
+}
+
+.wrist-1 {
+  width: 48px;
+  height: 48px;
+  background-position: -528px -48px;
+}
+
+.wrist-2 {
+  width: 48px;
+  height: 48px;
+  background-position: -576px -48px;
+}
+
+.wrist-3 {
+  width: 48px;
+  height: 48px;
+  background-position: -624px -48px;
+}
+
+.wrist-4 {
+  width: 48px;
+  height: 48px;
+  background-position: 0 -96px;
+}
+
+.wrist-5 {
+  width: 48px;
+  height: 48px;
+  background-position: -48px -96px;
+}
+
+.wrist-6 {
+  width: 48px;
+  height: 48px;
+  background-position: -96px -96px;
+}
+
+.wrist-7 {
+  width: 48px;
+  height: 48px;
+  background-position: -144px -96px;
+}
+
+.wrist-8 {
+  width: 48px;
+  height: 48px;
+  background-position: -192px -96px;
+}
+
+.wrist-9 {
+  width: 48px;
+  height: 48px;
+  background-position: -240px -96px;
+}
+
+.chest-10 {
+  width: 48px;
+  height: 48px;
+  background-position: -288px -96px;
+}
+
+.chest-11 {
+  width: 48px;
+  height: 48px;
+  background-position: -336px -96px;
+}
+
+.chest-12 {
+  width: 48px;
+  height: 48px;
+  background-position: -384px -96px;
+}
+
+.chest-13 {
+  width: 48px;
+  height: 48px;
+  background-position: -432px -96px;
+}
+
+.chest-14 {
+  width: 48px;
+  height: 48px;
+  background-position: -480px -96px;
+}
+
+.chest-15 {
+  width: 48px;
+  height: 48px;
+  background-position: -528px -96px;
+}
+
+.chest-16 {
+  width: 48px;
+  height: 48px;
+  background-position: -576px -96px;
+}
+
+.chest-17 {
+  width: 48px;
+  height: 48px;
+  background-position: -624px -96px;
+}
+
+.chest-1 {
+  width: 48px;
+  height: 48px;
+  background-position: 0 -144px;
+}
+
+.chest-2 {
+  width: 48px;
+  height: 48px;
+  background-position: -48px -144px;
+}
+
+.chest-3 {
+  width: 48px;
+  height: 48px;
+  background-position: -96px -144px;
+}
+
+.chest-4 {
+  width: 48px;
+  height: 48px;
+  background-position: -144px -144px;
+}
+
+.chest-5 {
+  width: 48px;
+  height: 48px;
+  background-position: -192px -144px;
+}
+
+.chest-6 {
+  width: 48px;
+  height: 48px;
+  background-position: -240px -144px;
+}
+
+.chest-7 {
+  width: 48px;
+  height: 48px;
+  background-position: -288px -144px;
+}
+
+.chest-8 {
+  width: 48px;
+  height: 48px;
+  background-position: -336px -144px;
+}
+
+.chest-9 {
+  width: 48px;
+  height: 48px;
+  background-position: -384px -144px;
+}
+
+.glove-10 {
+  width: 48px;
+  height: 48px;
+  background-position: -432px -144px;
+}
+
+.glove-11 {
+  width: 48px;
+  height: 48px;
+  background-position: -480px -144px;
+}
+
+.glove-1 {
+  width: 48px;
+  height: 48px;
+  background-position: -528px -144px;
+}
+
+.glove-2 {
+  width: 48px;
+  height: 48px;
+  background-position: -576px -144px;
+}
+
+.glove-3 {
+  width: 48px;
+  height: 48px;
+  background-position: -624px -144px;
+}
+
+.glove-4 {
+  width: 48px;
+  height: 48px;
+  background-position: 0 -192px;
+}
+
+.glove-5 {
+  width: 48px;
+  height: 48px;
+  background-position: -48px -192px;
+}
+
+.glove-6 {
+  width: 48px;
+  height: 48px;
+  background-position: -96px -192px;
+}
+
+.glove-7 {
+  width: 48px;
+  height: 48px;
+  background-position: -144px -192px;
+}
+
+.glove-8 {
+  width: 48px;
+  height: 48px;
+  background-position: -192px -192px;
+}
+
+.glove-9 {
+  width: 48px;
+  height: 48px;
+  background-position: -240px -192px;
+}
+
+.head-1 {
+  width: 48px;
+  height: 48px;
+  background-position: -288px -192px;
+}
+
+.head-2 {
+  width: 48px;
+  height: 48px;
+  background-position: -336px -192px;
+}
+
+.head-3 {
+  width: 48px;
+  height: 48px;
+  background-position: -384px -192px;
+}
+
+.head-4 {
+  width: 48px;
+  height: 48px;
+  background-position: -432px -192px;
+}
+
+.head-5 {
+  width: 48px;
+  height: 48px;
+  background-position: -480px -192px;
+}
+
+.misc-10 {
+  width: 48px;
+  height: 48px;
+  background-position: -528px -192px;
+}
+
+.misc-11 {
+  width: 48px;
+  height: 48px;
+  background-position: -576px -192px;
+}
+
+.misc-12 {
+  width: 48px;
+  height: 48px;
+  background-position: -624px -192px;
+}
+
+.misc-13 {
+  width: 48px;
+  height: 48px;
+  background-position: 0 -240px;
+}
+
+.misc-14 {
+  width: 48px;
+  height: 48px;
+  background-position: -48px -240px;
+}
+
+.misc-15 {
+  width: 48px;
+  height: 48px;
+  background-position: -96px -240px;
+}
+
+.misc-16 {
+  width: 48px;
+  height: 48px;
+  background-position: -144px -240px;
+}
+
+.misc-17 {
+  width: 48px;
+  height: 48px;
+  background-position: -192px -240px;
+}
+
+.misc-18 {
+  width: 48px;
+  height: 48px;
+  background-position: -240px -240px;
+}
+
+.misc-19 {
+  width: 48px;
+  height: 48px;
+  background-position: -288px -240px;
+}
+
+.misc-1 {
+  width: 48px;
+  height: 48px;
+  background-position: -336px -240px;
+}
+
+.misc-20 {
+  width: 48px;
+  height: 48px;
+  background-position: -384px -240px;
+}
+
+.misc-21 {
+  width: 48px;
+  height: 48px;
+  background-position: -432px -240px;
+}
+
+.misc-22 {
+  width: 48px;
+  height: 48px;
+  background-position: -480px -240px;
+}
+
+.misc-2 {
+  width: 48px;
+  height: 48px;
+  background-position: -528px -240px;
+}
+
+.misc-3 {
+  width: 48px;
+  height: 48px;
+  background-position: -576px -240px;
+}
+
+.misc-4 {
+  width: 48px;
+  height: 48px;
+  background-position: -624px -240px;
+}
+
+.misc-5 {
+  width: 48px;
+  height: 48px;
+  background-position: 0 -288px;
+}
+
+.misc-6 {
+  width: 48px;
+  height: 48px;
+  background-position: -48px -288px;
+}
+
+.misc-7 {
+  width: 48px;
+  height: 48px;
+  background-position: -96px -288px;
+}
+
+.misc-8 {
+  width: 48px;
+  height: 48px;
+  background-position: -144px -288px;
+}
+
+.misc-9 {
+  width: 48px;
+  height: 48px;
+  background-position: -192px -288px;
+}
+
+.necklace-1 {
+  width: 48px;
+  height: 48px;
+  background-position: -240px -288px;
+}
+
+.necklace-2 {
+  width: 48px;
+  height: 48px;
+  background-position: -288px -288px;
+}
+
+.necklace-3 {
+  width: 48px;
+  height: 48px;
+  background-position: -336px -288px;
+}
+
+.necklace-4 {
+  width: 48px;
+  height: 48px;
+  background-position: -384px -288px;
+}
+
+.necklace-5 {
+  width: 48px;
+  height: 48px;
+  background-position: -432px -288px;
+}
+
+.necklace-6 {
+  width: 48px;
+  height: 48px;
+  background-position: -480px -288px;
+}
+
+.necklace-7 {
+  width: 48px;
+  height: 48px;
+  background-position: -528px -288px;
+}
+
+.leg-1 {
+  width: 48px;
+  height: 48px;
+  background-position: -576px -288px;
+}
+
+.leg-2 {
+  width: 48px;
+  height: 48px;
+  background-position: -624px -288px;
+}
+
+.leg-3 {
+  width: 48px;
+  height: 48px;
+  background-position: 0 -336px;
+}
+
+.leg-4 {
+  width: 48px;
+  height: 48px;
+  background-position: -48px -336px;
+}
+
+.leg-5 {
+  width: 48px;
+  height: 48px;
+  background-position: -96px -336px;
+}
+
+.leg-6 {
+  width: 48px;
+  height: 48px;
+  background-position: -144px -336px;
+}
+
+.leg-7 {
+  width: 48px;
+  height: 48px;
+  background-position: -192px -336px;
+}
+
+.ring-10 {
+  width: 48px;
+  height: 48px;
+  background-position: -240px -336px;
+}
+
+.ring-11 {
+  width: 48px;
+  height: 48px;
+  background-position: -288px -336px;
+}
+
+.ring-1 {
+  width: 48px;
+  height: 48px;
+  background-position: -336px -336px;
+}
+
+.ring-2 {
+  width: 48px;
+  height: 48px;
+  background-position: -384px -336px;
+}
+
+.ring-3 {
+  width: 48px;
+  height: 48px;
+  background-position: -432px -336px;
+}
+
+.ring-4 {
+  width: 48px;
+  height: 48px;
+  background-position: -480px -336px;
+}
+
+.ring-5 {
+  width: 48px;
+  height: 48px;
+  background-position: -528px -336px;
+}
+
+.ring-6 {
+  width: 48px;
+  height: 48px;
+  background-position: -576px -336px;
+}
+
+.ring-7 {
+  width: 48px;
+  height: 48px;
+  background-position: -624px -336px;
+}
+
+.ring-8 {
+  width: 48px;
+  height: 48px;
+  background-position: 0 -384px;
+}
+
+.ring-9 {
+  width: 48px;
+  height: 48px;
+  background-position: -48px -384px;
+}
+
+.shoulder-10 {
+  width: 48px;
+  height: 48px;
+  background-position: -96px -384px;
+}
+
+.shoulder-1 {
+  width: 48px;
+  height: 48px;
+  background-position: -144px -384px;
+}
+
+.shoulder-2 {
+  width: 48px;
+  height: 48px;
+  background-position: -192px -384px;
+}
+
+.shoulder-3 {
+  width: 48px;
+  height: 48px;
+  background-position: -240px -384px;
+}
+
+.shoulder-4 {
+  width: 48px;
+  height: 48px;
+  background-position: -288px -384px;
+}
+
+.shoulder-5 {
+  width: 48px;
+  height: 48px;
+  background-position: -336px -384px;
+}
+
+.shoulder-6 {
+  width: 48px;
+  height: 48px;
+  background-position: -384px -384px;
+}
+
+.shoulder-7 {
+  width: 48px;
+  height: 48px;
+  background-position: -432px -384px;
+}
+
+.shoulder-8 {
+  width: 48px;
+  height: 48px;
+  background-position: -480px -384px;
+}
+
+.shoulder-9 {
+  width: 48px;
+  height: 48px;
+  background-position: -528px -384px;
+}
+
+.talisman-10 {
+  width: 48px;
+  height: 48px;
+  background-position: -576px -384px;
+}
+
+.talisman-11 {
+  width: 48px;
+  height: 48px;
+  background-position: -624px -384px;
+}
+
+.talisman-12 {
+  width: 48px;
+  height: 48px;
+  background-position: 0 -432px;
+}
+
+.talisman-13 {
+  width: 48px;
+  height: 48px;
+  background-position: -48px -432px;
+}
+
+.talisman-14 {
+  width: 48px;
+  height: 48px;
+  background-position: -96px -432px;
+}
+
+.talisman-15 {
+  width: 48px;
+  height: 48px;
+  background-position: -144px -432px;
+}
+
+.talisman-16 {
+  width: 48px;
+  height: 48px;
+  background-position: -192px -432px;
+}
+
+.talisman-17 {
+  width: 48px;
+  height: 48px;
+  background-position: -240px -432px;
+}
+
+.talisman-18 {
+  width: 48px;
+  height: 48px;
+  background-position: -288px -432px;
+}
+
+.talisman-19 {
+  width: 48px;
+  height: 48px;
+  background-position: -336px -432px;
+}
+
+.talisman-1 {
+  width: 48px;
+  height: 48px;
+  background-position: -384px -432px;
+}
+
+.talisman-20 {
+  width: 48px;
+  height: 48px;
+  background-position: -432px -432px;
+}
+
+.talisman-21 {
+  width: 48px;
+  height: 48px;
+  background-position: -480px -432px;
+}
+
+.talisman-22 {
+  width: 48px;
+  height: 48px;
+  background-position: -528px -432px;
+}
+
+.talisman-23 {
+  width: 48px;
+  height: 48px;
+  background-position: -576px -432px;
+}
+
+.talisman-2 {
+  width: 48px;
+  height: 48px;
+  background-position: -624px -432px;
+}
+
+.talisman-3 {
+  width: 48px;
+  height: 48px;
+  background-position: 0 -480px;
+}
+
+.talisman-4 {
+  width: 48px;
+  height: 48px;
+  background-position: -48px -480px;
+}
+
+.talisman-5 {
+  width: 48px;
+  height: 48px;
+  background-position: -96px -480px;
+}
+
+.talisman-6 {
+  width: 48px;
+  height: 48px;
+  background-position: -144px -480px;
+}
+
+.talisman-7 {
+  width: 48px;
+  height: 48px;
+  background-position: -192px -480px;
+}
+
+.talisman-8 {
+  width: 48px;
+  height: 48px;
+  background-position: -240px -480px;
+}
+
+.talisman-9 {
+  width: 48px;
+  height: 48px;
+  background-position: -288px -480px;
+}
+
+.weapon-10 {
+  width: 48px;
+  height: 48px;
+  background-position: -336px -480px;
+}
+
+.weapon-11 {
+  width: 48px;
+  height: 48px;
+  background-position: -384px -480px;
+}
+
+.weapon-12 {
+  width: 48px;
+  height: 48px;
+  background-position: -432px -480px;
+}
+
+.weapon-13 {
+  width: 48px;
+  height: 48px;
+  background-position: -480px -480px;
+}
+
+.weapon-14 {
+  width: 48px;
+  height: 48px;
+  background-position: -528px -480px;
+}
+
+.weapon-15 {
+  width: 48px;
+  height: 48px;
+  background-position: -576px -480px;
+}
+
+.weapon-16 {
+  width: 48px;
+  height: 48px;
+  background-position: -624px -480px;
+}
+
+.weapon-17 {
+  width: 48px;
+  height: 48px;
+  background-position: 0 -528px;
+}
+
+.weapon-18 {
+  width: 48px;
+  height: 48px;
+  background-position: -48px -528px;
+}
+
+.weapon-19 {
+  width: 48px;
+  height: 48px;
+  background-position: -96px -528px;
+}
+
+.weapon-1 {
+  width: 48px;
+  height: 48px;
+  background-position: -144px -528px;
+}
+
+.weapon-20 {
+  width: 48px;
+  height: 48px;
+  background-position: -192px -528px;
+}
+
+.weapon-21 {
+  width: 48px;
+  height: 48px;
+  background-position: -240px -528px;
+}
+
+.weapon-22 {
+  width: 48px;
+  height: 48px;
+  background-position: -288px -528px;
+}
+
+.weapon-23 {
+  width: 48px;
+  height: 48px;
+  background-position: -336px -528px;
+}
+
+.weapon-24 {
+  width: 48px;
+  height: 48px;
+  background-position: -384px -528px;
+}
+
+.weapon-25 {
+  width: 48px;
+  height: 48px;
+  background-position: -432px -528px;
+}
+
+.weapon-26 {
+  width: 48px;
+  height: 48px;
+  background-position: -480px -528px;
+}
+
+.weapon-27 {
+  width: 48px;
+  height: 48px;
+  background-position: -528px -528px;
+}
+
+.weapon-28 {
+  width: 48px;
+  height: 48px;
+  background-position: -576px -528px;
+}
+
+.weapon-29 {
+  width: 48px;
+  height: 48px;
+  background-position: -624px -528px;
+}
+
+.weapon-2 {
+  width: 48px;
+  height: 48px;
+  background-position: 0 -576px;
+}
+
+.weapon-30 {
+  width: 48px;
+  height: 48px;
+  background-position: -48px -576px;
+}
+
+.weapon-31 {
+  width: 48px;
+  height: 48px;
+  background-position: -96px -576px;
+}
+
+.weapon-32 {
+  width: 48px;
+  height: 48px;
+  background-position: -144px -576px;
+}
+
+.weapon-33 {
+  width: 48px;
+  height: 48px;
+  background-position: -192px -576px;
+}
+
+.weapon-34 {
+  width: 48px;
+  height: 48px;
+  background-position: -240px -576px;
+}
+
+.weapon-35 {
+  width: 48px;
+  height: 48px;
+  background-position: -288px -576px;
+}
+
+.weapon-36 {
+  width: 48px;
+  height: 48px;
+  background-position: -336px -576px;
+}
+
+.weapon-37 {
+  width: 48px;
+  height: 48px;
+  background-position: -384px -576px;
+}
+
+.weapon-38 {
+  width: 48px;
+  height: 48px;
+  background-position: -432px -576px;
+}
+
+.weapon-39 {
+  width: 48px;
+  height: 48px;
+  background-position: -480px -576px;
+}
+
+.weapon-3 {
+  width: 48px;
+  height: 48px;
+  background-position: -528px -576px;
+}
+
+.weapon-40 {
+  width: 48px;
+  height: 48px;
+  background-position: -576px -576px;
+}
+
+.weapon-41 {
+  width: 48px;
+  height: 48px;
+  background-position: -624px -576px;
+}
+
+.weapon-42 {
+  width: 48px;
+  height: 48px;
+  background-position: 0 -624px;
+}
+
+.weapon-43 {
+  width: 48px;
+  height: 48px;
+  background-position: -48px -624px;
+}
+
+.weapon-44 {
+  width: 48px;
+  height: 48px;
+  background-position: -96px -624px;
+}
+
+.weapon-45 {
+  width: 48px;
+  height: 48px;
+  background-position: -144px -624px;
+}
+
+.weapon-46 {
+  width: 48px;
+  height: 48px;
+  background-position: -192px -624px;
+}
+
+.weapon-47 {
+  width: 48px;
+  height: 48px;
+  background-position: -240px -624px;
+}
+
+.weapon-48 {
+  width: 48px;
+  height: 48px;
+  background-position: -288px -624px;
+}
+
+.weapon-49 {
+  width: 48px;
+  height: 48px;
+  background-position: -336px -624px;
+}
+
+.weapon-4 {
+  width: 48px;
+  height: 48px;
+  background-position: -384px -624px;
+}
+
+.weapon-50 {
+  width: 48px;
+  height: 48px;
+  background-position: -432px -624px;
+}
+
+.weapon-51 {
+  width: 48px;
+  height: 48px;
+  background-position: -480px -624px;
+}
+
+.weapon-52 {
+  width: 48px;
+  height: 48px;
+  background-position: -528px -624px;
+}
+
+.weapon-53 {
+  width: 48px;
+  height: 48px;
+  background-position: -576px -624px;
+}
+
+.weapon-54 {
+  width: 48px;
+  height: 48px;
+  background-position: -624px -624px;
+}
+
+.weapon-55 {
+  width: 48px;
+  height: 48px;
+  background-position: -672px 0;
+}
+
+.weapon-56 {
+  width: 48px;
+  height: 48px;
+  background-position: -672px -48px;
+}
+
+.weapon-5 {
+  width: 48px;
+  height: 48px;
+  background-position: -672px -96px;
+}
+
+.weapon-6 {
+  width: 48px;
+  height: 48px;
+  background-position: -672px -144px;
+}
+
+.weapon-7 {
+  width: 48px;
+  height: 48px;
+  background-position: -672px -192px;
+}
+
+.weapon-8 {
+  width: 48px;
+  height: 48px;
+  background-position: -672px -240px;
+}
+
+.weapon-9 {
+  width: 48px;
+  height: 48px;
+  background-position: -672px -288px;
+}
+
+
+/* SPELL SPRITES NOW */
+.spellsprite {
+  background-image: url("http://res.cloudinary.com/treborx555/image/upload/v1472247353/spritesheet_ne1oxv.png");
+  background-repeat: no-repeat;
+  display: block;
+}
+
+.-basic {
+  width: 60px;
+  height: 60px;
+  background-position: 0 0;
+}
+
+.-blood-1 {
+  width: 60px;
+  height: 60px;
+  background-position: -60px 0;
+}
+
+.-blood-2 {
+  width: 60px;
+  height: 60px;
+  background-position: -120px 0;
+}
+
+.-blood-3 {
+  width: 60px;
+  height: 60px;
+  background-position: -180px 0;
+}
+
+.-blood-4 {
+  width: 60px;
+  height: 60px;
+  background-position: -240px 0;
+}
+
+.-blood-5 {
+  width: 60px;
+  height: 60px;
+  background-position: -300px 0;
+}
+
+.-blood-6 {
+  width: 60px;
+  height: 60px;
+  background-position: -360px 0;
+}
+
+.-defend-1 {
+  width: 60px;
+  height: 60px;
+  background-position: 0 -60px;
+}
+
+.-defend-2 {
+  width: 60px;
+  height: 60px;
+  background-position: -60px -60px;
+}
+
+.-defend-3 {
+  width: 60px;
+  height: 60px;
+  background-position: -120px -60px;
+}
+
+.-defend-4 {
+  width: 60px;
+  height: 60px;
+  background-position: -180px -60px;
+}
+
+.-defend-5 {
+  width: 60px;
+  height: 60px;
+  background-position: -240px -60px;
+}
+
+.-defend-6 {
+  width: 60px;
+  height: 60px;
+  background-position: -300px -60px;
+}
+
+.-fire-1 {
+  width: 60px;
+  height: 60px;
+  background-position: -360px -60px;
+}
+
+.-fire-2 {
+  width: 60px;
+  height: 60px;
+  background-position: 0 -120px;
+}
+
+.-fire-3 {
+  width: 60px;
+  height: 60px;
+  background-position: -60px -120px;
+}
+
+.-fire-4 {
+  width: 60px;
+  height: 60px;
+  background-position: -120px -120px;
+}
+
+.-fire-5 {
+  width: 60px;
+  height: 60px;
+  background-position: -180px -120px;
+}
+
+.-fire-6 {
+  width: 60px;
+  height: 60px;
+  background-position: -240px -120px;
+}
+
+.-heal-1 {
+  width: 60px;
+  height: 60px;
+  background-position: -300px -120px;
+}
+
+.-heal-2 {
+  width: 60px;
+  height: 60px;
+  background-position: -360px -120px;
+}
+
+.-heal-3 {
+  width: 60px;
+  height: 60px;
+  background-position: 0 -180px;
+}
+
+.-heal-4 {
+  width: 60px;
+  height: 60px;
+  background-position: -60px -180px;
+}
+
+.-heal-5 {
+  width: 60px;
+  height: 60px;
+  background-position: -120px -180px;
+}
+
+.-heal-6 {
+  width: 60px;
+  height: 60px;
+  background-position: -180px -180px;
+}
+
+.-ice-1 {
+  width: 60px;
+  height: 60px;
+  background-position: -240px -180px;
+}
+
+.-ice-2 {
+  width: 60px;
+  height: 60px;
+  background-position: -300px -180px;
+}
+
+.-ice-3 {
+  width: 60px;
+  height: 60px;
+  background-position: -360px -180px;
+}
+
+.-ice-4 {
+  width: 60px;
+  height: 60px;
+  background-position: 0 -240px;
+}
+
+.-ice-5 {
+  width: 60px;
+  height: 60px;
+  background-position: -60px -240px;
+}
+
+.-ice-6 {
+  width: 60px;
+  height: 60px;
+  background-position: -120px -240px;
+}
+
+.-lightning-1 {
+  width: 60px;
+  height: 60px;
+  background-position: -180px -240px;
+}
+
+.-lightning-2 {
+  width: 60px;
+  height: 60px;
+  background-position: -240px -240px;
+}
+
+.-lightning-3 {
+  width: 60px;
+  height: 60px;
+  background-position: -300px -240px;
+}
+
+.-lightning-4 {
+  width: 60px;
+  height: 60px;
+  background-position: -360px -240px;
+}
+
+.-lightning-5 {
+  width: 60px;
+  height: 60px;
+  background-position: 0 -300px;
+}
+
+.-lightning-6 {
+  width: 60px;
+  height: 60px;
+  background-position: -60px -300px;
+}
+
+.-nature-1 {
+  width: 60px;
+  height: 60px;
+  background-position: -120px -300px;
+}
+
+.-nature-2 {
+  width: 60px;
+  height: 60px;
+  background-position: -180px -300px;
+}
+
+.-nature-3 {
+  width: 60px;
+  height: 60px;
+  background-position: -240px -300px;
+}
+
+.-nature-4 {
+  width: 60px;
+  height: 60px;
+  background-position: -300px -300px;
+}
+
+.-nature-5 {
+  width: 60px;
+  height: 60px;
+  background-position: -360px -300px;
+}
+
+.-nature-6 {
+  width: 60px;
+  height: 60px;
+  background-position: 0 -360px;
+}
+
+.-shadow-1 {
+  width: 60px;
+  height: 60px;
+  background-position: -60px -360px;
+}
+
+.-shadow-2 {
+  width: 60px;
+  height: 60px;
+  background-position: -120px -360px;
+}
+
+.-shadow-3 {
+  width: 60px;
+  height: 60px;
+  background-position: -180px -360px;
+}
+
+.-shadow-4 {
+  width: 60px;
+  height: 60px;
+  background-position: -240px -360px;
+}
+
+.-shadow-5 {
+  width: 60px;
+  height: 60px;
+  background-position: -300px -360px;
+}
+
+.-shadow-6 {
+  width: 60px;
+  height: 60px;
+  background-position: -360px -360px;
+}
+
+.-support-1 {
+  width: 60px;
+  height: 60px;
+  background-position: -420px 0;
+}
+
+.-support-2 {
+  width: 60px;
+  height: 60px;
+  background-position: -420px -60px;
+}
+
+.-support-3 {
+  width: 60px;
+  height: 60px;
+  background-position: -420px -120px;
+}
+
+.-support-4 {
+  width: 60px;
+  height: 60px;
+  background-position: -420px -180px;
+}
+
+.-support-5 {
+  width: 60px;
+  height: 60px;
+  background-position: -420px -240px;
+}
+
+.-support-6 {
+  width: 60px;
+  height: 60px;
+  background-position: -420px -300px;
+}
+
+
+
+.statsprite{
+    background:url("http://res.cloudinary.com/treborx555/image/upload/v1472414022/spritesheet_9_vyyt5q.png");
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.-blood {
+    width: 30px;
+    height: 30px;
+    background-position: 0 0;
+}
+
+.-critical {
+    width: 30px;
+    height: 30px;
+    background-position: -30px 0;
+}
+
+.-damage {
+    width: 30px;
+    height: 30px;
+    background-position: -60px 0;
+}
+
+.-dodge {
+    width: 30px;
+    height: 30px;
+    background-position: 0 -30px;
+}
+
+.-fire {
+    width: 30px;
+    height: 30px;
+    background-position: -30px -30px;
+}
+
+.-healpow {
+    width: 30px;
+    height: 30px;
+    background-position: -60px -30px;
+}
+
+.-health {
+    width: 30px;
+    height: 30px;
+    background-position: 0 -60px;
+}
+
+.-ice {
+    width: 30px;
+    height: 30px;
+    background-position: -30px -60px;
+}
+
+.-lifesteal {
+    width: 30px;
+    height: 30px;
+    background-position: -60px -60px;
+}
+
+.-magicpow {
+    width: 30px;
+    height: 30px;
+    background-position: -90px 0;
+}
+
+.-mana {
+    width: 30px;
+    height: 30px;
+    background-position: -90px -30px;
+}
+
+.-nature {
+    width: 30px;
+    height: 30px;
+    background-position: -90px -60px;
+}
+
+.-shadow {
+    width: 30px;
+    height: 30px;
+    background-position: 0 -90px;
+}
+
+.-storm {
+    width: 30px;
+    height: 30px;
+    background-position: -30px -90px;
+}
+
+
+
+.mobsprites {
+  background-image: url("http://res.cloudinary.com/treborx555/image/upload/v1472288881/spritesheet_7_guocsq.png");
+  background-repeat: no-repeat;
+  display: block;
+}
+
+.boss10 {
+  width: 125px;
+  height: 150px;
+  background-position: 0 0;
+}
+
+.boss11 {
+  width: 125px;
+  height: 150px;
+  background-position: -125px 0;
+}
+
+.boss12 {
+  width: 125px;
+  height: 150px;
+  background-position: -250px 0;
+}
+
+.boss13 {
+  width: 125px;
+  height: 150px;
+  background-position: 0 -150px;
+}
+
+.boss1 {
+  width: 125px;
+  height: 150px;
+  background-position: -125px -150px;
+}
+
+.boss2 {
+  width: 125px;
+  height: 150px;
+  background-position: -250px -150px;
+}
+
+.boss3 {
+  width: 125px;
+  height: 150px;
+  background-position: 0 -300px;
+}
+
+.boss4 {
+  width: 125px;
+  height: 150px;
+  background-position: -125px -300px;
+}
+
+.boss5 {
+  width: 125px;
+  height: 150px;
+  background-position: -250px -300px;
+}
+
+.boss6 {
+  width: 125px;
+  height: 150px;
+  background-position: -375px 0;
+}
+
+.boss7 {
+  width: 125px;
+  height: 150px;
+  background-position: -375px -150px;
+}
+
+.boss8 {
+  width: 125px;
+  height: 150px;
+  background-position: -375px -300px;
+}
+
+.boss9 {
+  width: 125px;
+  height: 150px;
+  background-position: 0 -450px;
+}
+
+
+.tinyspellsprites {
+    background-image: url("http://res.cloudinary.com/treborx555/image/upload/v1472327630/spritesheet_8_igvtbg.png");
+    background-repeat: no-repeat;
+    display: block;
+}
+
+
+.basic {
+    width: 30px;
+    height: 30px;
+    background-position: 0 0;
+}
+
+.blood-1 {
+    width: 30px;
+    height: 30px;
+    background-position: -30px 0;
+}
+
+.blood-2 {
+    width: 30px;
+    height: 30px;
+    background-position: -60px 0;
+}
+
+.blood-3 {
+    width: 30px;
+    height: 30px;
+    background-position: -90px 0;
+}
+
+.blood-4 {
+    width: 30px;
+    height: 30px;
+    background-position: -120px 0;
+}
+
+.blood-5 {
+    width: 30px;
+    height: 30px;
+    background-position: -150px 0;
+}
+
+.blood-6 {
+    width: 30px;
+    height: 30px;
+    background-position: -180px 0;
+}
+
+.defend-1 {
+    width: 30px;
+    height: 30px;
+    background-position: 0 -30px;
+}
+
+.defend-2 {
+    width: 30px;
+    height: 30px;
+    background-position: -30px -30px;
+}
+
+.defend-3 {
+    width: 30px;
+    height: 30px;
+    background-position: -60px -30px;
+}
+
+.defend-4 {
+    width: 30px;
+    height: 30px;
+    background-position: -90px -30px;
+}
+
+.defend-5 {
+    width: 30px;
+    height: 30px;
+    background-position: -120px -30px;
+}
+
+.defend-6 {
+    width: 30px;
+    height: 30px;
+    background-position: -150px -30px;
+}
+
+.fire-1 {
+    width: 30px;
+    height: 30px;
+    background-position: -180px -30px;
+}
+
+.fire-2 {
+    width: 30px;
+    height: 30px;
+    background-position: 0 -60px;
+}
+
+.fire-3 {
+    width: 30px;
+    height: 30px;
+    background-position: -30px -60px;
+}
+
+.fire-4 {
+    width: 30px;
+    height: 30px;
+    background-position: -60px -60px;
+}
+
+.fire-5 {
+    width: 30px;
+    height: 30px;
+    background-position: -90px -60px;
+}
+
+.fire-6 {
+    width: 30px;
+    height: 30px;
+    background-position: -120px -60px;
+}
+
+.heal-1 {
+    width: 30px;
+    height: 30px;
+    background-position: -150px -60px;
+}
+
+.heal-2 {
+    width: 30px;
+    height: 30px;
+    background-position: -180px -60px;
+}
+
+.heal-3 {
+    width: 30px;
+    height: 30px;
+    background-position: 0 -90px;
+}
+
+.heal-4 {
+    width: 30px;
+    height: 30px;
+    background-position: -30px -90px;
+}
+
+.heal-5 {
+    width: 30px;
+    height: 30px;
+    background-position: -60px -90px;
+}
+
+.heal-6 {
+    width: 30px;
+    height: 30px;
+    background-position: -90px -90px;
+}
+
+.ice-1 {
+    width: 30px;
+    height: 30px;
+    background-position: -120px -90px;
+}
+
+.ice-2 {
+    width: 30px;
+    height: 30px;
+    background-position: -150px -90px;
+}
+
+.ice-3 {
+    width: 30px;
+    height: 30px;
+    background-position: -180px -90px;
+}
+
+.ice-4 {
+    width: 30px;
+    height: 30px;
+    background-position: 0 -120px;
+}
+
+.ice-5 {
+    width: 30px;
+    height: 30px;
+    background-position: -30px -120px;
+}
+
+.ice-6 {
+    width: 30px;
+    height: 30px;
+    background-position: -60px -120px;
+}
+
+.storm-1 {
+    width: 30px;
+    height: 30px;
+    background-position: -90px -120px;
+}
+
+.storm-2 {
+    width: 30px;
+    height: 30px;
+    background-position: -120px -120px;
+}
+
+.storm-3 {
+    width: 30px;
+    height: 30px;
+    background-position: -150px -120px;
+}
+
+.storm-4 {
+    width: 30px;
+    height: 30px;
+    background-position: -180px -120px;
+}
+
+.storm-5 {
+    width: 30px;
+    height: 30px;
+    background-position: 0 -150px;
+}
+
+.storm-6 {
+    width: 30px;
+    height: 30px;
+    background-position: -30px -150px;
+}
+
+.nature-1 {
+    width: 30px;
+    height: 30px;
+    background-position: -60px -150px;
+}
+
+.nature-2 {
+    width: 30px;
+    height: 30px;
+    background-position: -90px -150px;
+}
+
+.nature-3 {
+    width: 30px;
+    height: 30px;
+    background-position: -120px -150px;
+}
+
+.nature-4 {
+    width: 30px;
+    height: 30px;
+    background-position: -150px -150px;
+}
+
+.nature-5 {
+    width: 30px;
+    height: 30px;
+    background-position: -180px -150px;
+}
+
+.nature-6 {
+    width: 30px;
+    height: 30px;
+    background-position: 0 -180px;
+}
+
+.shadow-1 {
+    width: 30px;
+    height: 30px;
+    background-position: -30px -180px;
+}
+
+.shadow-2 {
+    width: 30px;
+    height: 30px;
+    background-position: -60px -180px;
+}
+
+.shadow-3 {
+    width: 30px;
+    height: 30px;
+    background-position: -90px -180px;
+}
+
+.shadow-4 {
+    width: 30px;
+    height: 30px;
+    background-position: -120px -180px;
+}
+
+.shadow-5 {
+    width: 30px;
+    height: 30px;
+    background-position: -150px -180px;
+}
+
+.shadow-6 {
+    width: 30px;
+    height: 30px;
+    background-position: -180px -180px;
+}
+
+.support-1 {
+    width: 30px;
+    height: 30px;
+    background-position: -210px 0;
+}
+
+.support-2 {
+    width: 30px;
+    height: 30px;
+    background-position: -210px -30px;
+}
+
+.support-3 {
+    width: 30px;
+    height: 30px;
+    background-position: -210px -60px;
+}
+
+.support-4 {
+    width: 30px;
+    height: 30px;
+    background-position: -210px -90px;
+}
+
+.support-5 {
+    width: 30px;
+    height: 30px;
+    background-position: -210px -120px;
+}
+
+.support-6 {
+    width: 30px;
+    height: 30px;
+    background-position: -210px -150px;
+}
+
+
+
+
+
+
+
+.infospells{
+    background-image: url("http://res.cloudinary.com/treborx555/image/upload/v1472455892/spritesheet_10_mgjpmb.png");
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.-basicX {
+    width: 30px;
+    height: 30px;
+    background-position: 0 0;
+}
+
+.-blood-2X {
+    width: 30px;
+    height: 30px;
+    background-position: -30px 0;
+}
+
+.-blood-3X {
+    width: 30px;
+    height: 30px;
+    background-position: -60px 0;
+}
+
+.-defend-3X {
+    width: 30px;
+    height: 30px;
+    background-position: 0 -30px;
+}
+
+.-fire-3X {
+    width: 30px;
+    height: 30px;
+    background-position: -30px -30px;
+}
+
+.-heal-2X {
+    width: 30px;
+    height: 30px;
+    background-position: -60px -30px;
+}
+
+.-ice-1X {
+    width: 30px;
+    height: 30px;
+    background-position: 0 -60px;
+}
+
+.-lightning-2X {
+    width: 30px;
+    height: 30px;
+    background-position: -30px -60px;
+}
+
+.-nature-2X {
+    width: 30px;
+    height: 30px;
+    background-position: -60px -60px;
+}
+
+.-nature-4X {
+    width: 30px;
+    height: 30px;
+    background-position: -90px 0;
+}
+
+.-shadow-1X {
+    width: 30px;
+    height: 30px;
+    background-position: -90px -30px;
+}
+
+.-shadow-3X {
+    width: 30px;
+    height: 30px;
+    background-position: -90px -60px;
+}
+
+.-support-2X {
+    width: 30px;
+    height: 30px;
+    background-position: 0 -90px;
+}
