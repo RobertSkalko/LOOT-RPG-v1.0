@@ -85,8 +85,6 @@ var NatureDMG = 5*player.level + buffNatureDMG + player.totalNatureDMG - nerfNat
 var HealPow = 5*player.level + buffHealPow + player.totalHealPow - nerfHealPow;
 var Lifesteal = buffLifesteal + player.totalLifesteal - nerfLifesteal;
 
-
-
 var currentplayerhealth;
 var currentplayermana;
 var currentbosshealth;
@@ -125,7 +123,6 @@ var thornscooldown=false;
 var bloodstrikecooldown=false;
 var healcooldown=false;
 var shieldcooldown=false;
-var bloodsapcooldown=false;
 var buffmagiccooldown=false;
 var naturehealcooldown=false;
 var manarestorecooldown=false;
@@ -382,8 +379,7 @@ function critical(x) {
     if (critroll < Critical) {playerdamage = playerdamage * 3;}     
     currentbosshealth=currentbosshealth-playerdamage;
     $("#rightinfo").prepend("<p>BloodStrike does: "+playerdamage+"DMG!");  
-    currentplayermana=currentplayermana - bloodstrikemana;
-    currentplayerhealth=currentplayerhealth - Math.floor(currentplayerhealth/2);
+    currentplayerhealth=currentplayerhealth - Math.floor(currentplayerhealth/4);
    }  
 
    if (x === "shadowbolt"){
@@ -408,10 +404,10 @@ function bloodstrike(){
   buffLifesteal=0;
   $("#bloodstrike").removeClass("oncooldown");}   
  
-   if (bloodstrikecooldown===false && currentplayermana > bloodstrikemana){
+   if (bloodstrikecooldown===false){
      bloodstrikecooldown=true;
       buffLifesteal=BloodDMG;
-      currentplayerhealth=Math.floor(currentplayerhealth/2); 
+      
      $("#bloodstrike").addClass("oncooldown");
      critical("bloodstrike");  
      setTimeout(resetbloodstrike,5000);
@@ -665,8 +661,8 @@ $("#gold").text("Gold: "+player.gold);
 $("#level").text("Level: "+player.level);  
 }
 
-setInterval(displaystats, 2000);
-setInterval(countplayerstats, 2000);
+
+
 
 function countplayerstats() {
 
@@ -724,6 +720,10 @@ function countplayerstats() {
   if (HealPow<0){HealPow=0;}
   if (Critical<0){Critical=0;}
   if (Lifesteal<0){Lifesteal=0;}
+  if (BloodDMG<0){BloodDMG=0;}
+  if (Mana<0){Mana=0;}
+
+  displaystats();
 
     } // count stats function
 
@@ -837,7 +837,7 @@ function createitem() {
       generateditem.stats[affixes[randomstat][0]] = [statnumber, statmax, statcolor];
       generateditem.totalstats[affixes[randomstat][0]] = statnumber;
     }
-    var invcount, itemidcount, itemid, allclasses, itemclass;
+    var invcount, itemidcount, itemid, allclasses;
 
     // item done generating
     for (var f = 1; f < 29; f++) {
@@ -871,12 +871,11 @@ document.oncontextmenu = function() {
 function addsummon(){
 player.summonbosscounter++;
 
-if (player.summonbosscounter > 10){
+if (player.summonbosscounter > 5){
 player.summonbosscounter=0;
 player.summons++;
-var fightcount = "Fights: " + player.summons;
-$("#fightbutton").text(fightcount);
-
+var fightcount = "Boss Summons: " + player.summons;
+$("#bosssummons").text(fightcount);
 }
 
 }
@@ -889,14 +888,18 @@ function checkexp(){
     player.level++;
   }
 
-  fightcount = "Fights: " + player.summons;
-  $("#fightbutton").text(fightcount);
+  fightcount = "Boss Summons: " + player.summons;
+  $("#bosssummons").text(fightcount);
 
 }
-setInterval(checkexp,15000);
+
 
 function startfight(){
   battle=true;
+  
+    
+  
+  $("#leftinfo").prepend("<p>Fight has started!</p>");  
 
 
  basicattackcooldown=false;
@@ -928,7 +931,7 @@ function startfight(){
  naturehealmana=15*boss.level;
 
 
-  resetplayerstats()
+  resetplayerstats();
   var randombossname= Math.floor(Math.random()*13)+1;
   var bossname="boss"+randombossname+" "+" mobsprites bosspic";
   var bosshitroll;
@@ -947,8 +950,7 @@ function startfight(){
   $("#boss").html("<img class='"+bossname+ "' ></img>");
   $("#bosshptext").text(currentbosshealth+"/"+currentbosshealth);
   $("#bosshpbar").css("width","100%");
-  $("#leftinfo").empty();
-  $("#rightinfo").empty();
+
 
   
 
@@ -956,6 +958,9 @@ function startfight(){
     var barpercent = currentbosshealth / boss.health*100;
     var playerhpbar = currentplayerhealth / Health *100;
     var playermanabar =currentplayermana / Mana *100;
+
+    if (playerhpbar > 100){playerhpbar = 100;}
+    if (playermanabar > 100){playermanabar = 100;}
 
     $("#bosshpbar").animate({width: barpercent+"%"},"slow");
     $("#bosshptext").text(currentbosshealth + "/"+boss.health);
@@ -968,8 +973,7 @@ function startfight(){
    function bossattack(){
      bossdamage= boss.damage;
      bosscritdamage=boss.damage*3;
-     bosshitroll = Math.floor(Math.random() * (100 - Dodge)) + 1;
-    
+     bosshitroll = Math.floor(Math.random() * (100 - Dodge)) + 1;    
 
 
       function attackbasicplayer(){
@@ -1069,8 +1073,8 @@ function startfight(){
 
 
 
-
       var bosschoosespell = Math.floor(Math.random()*100);
+
 
       if (bosschoosespell <10){$("#leftinfo").prepend("<p> Boss Is preparing a CRITICAL!</p>");setTimeout(critplayer,3000);}      
       else if (bosschoosespell < 12){castBloodDMGreduce();}
@@ -1080,7 +1084,8 @@ function startfight(){
       else if (bosschoosespell < 20){castNatureDMGreduce();}
       else if (bosschoosespell < 22){castHealPowreduce();}
       else if (bosschoosespell < 24){castShadowDMGreduce();}
-      else if (bosschoosespell < 100){attackbasicplayer();}
+      else if (bosschoosespell <30){castdodgereduce();}
+      else if (bosschoosespell < 101){attackbasicplayer();}
     
     
     updatehealthbar();
@@ -1138,30 +1143,33 @@ function startfight(){
 
 
 $("#summonfaster").click(function(){
-if (player.summoninterval-6000 > 0){
-player.summoninterval=player.summoninterval - 6000;
-$("#summons").text("1 spawn per: "+Math.floor(player.summoninterval/6000)+"minutes");
+if (player.summoninterval-10000 > 0){
+player.summoninterval=player.summoninterval - 10000;
+$("#summons").text("1 spawn per: "+Math.floor(player.summoninterval/10000)+"minutes");
 }
 });
 
 $("#summonslower").click(function(){
 
-player.summoninterval=player.summoninterval + 6000;
-$("#summons").text("1 spawn per: "+Math.floor(player.summoninterval/6000)+"minutes");
+player.summoninterval=player.summoninterval + 10000;
+$("#summons").text("1 spawn per: "+Math.floor(player.summoninterval/10000)+"minutes");
+console.log(player.summoninterval);
 
 });
 
 
 $("#minus").click(function(){
-if( boss.level > 1){
+if( boss.level > 1 && battle != true){
 boss.level--;
 $("#bosslevel").text("LVL: "+boss.level);
 }
 });
 
 $("#plus").click(function(){
+if (battle != true){
 boss.level++;
 $("#bosslevel").text("LVL: "+boss.level);
+}
 });
 
 //inventory options
@@ -1236,7 +1244,35 @@ $("#main").click(function() {
 
 });
 
+$("#sellall").click(function(){
+ function clicked() {
 
+       if (confirm('Are you sure you want to sell your whole inventory?')){
+           sellall();
+       } else {
+           return false;
+       }
+    }
+    clicked();
+
+});
+
+function sellall(){
+
+  for (var i=1; i<29;i++){
+
+  var sellitemid = "i" + i;
+
+ if (inventory[sellitemid]["value"] != undefined && inventory[sellitemid]["value"] != null){
+  player.gold = player.gold + inventory[sellitemid]["value"];
+  $("#" + sellitemid).empty();
+  inventory[sellitemid] = {};
+
+}
+
+}
+
+}
 
 $("#sell").click(function() {
 
@@ -1277,13 +1313,27 @@ $("#equip").click(function() {
 $("#fightbutton").click(function(){
 
 function startfightonclick(){
-if (player.summons > 0 && battle != true ) {
-player.summons--;
-startfight();
-}}
-setTimeout(startfightonclick,5000);
 
+if (player.summons < 1 && battle !=true){
+("#leftinfo").prepend("<p>You don't have enough Boss summons!</p>");
+  }
+
+if (battle == true){
+("#leftinfo").prepend("<p>Cannot start battle while in combat</p>");
+}
+if (player.summons > 0 && battle != true ) {
+
+  battle = true;
+  $("#leftinfo").empty();
+  $("#rightinfo").empty();
+  $("#leftinfo").prepend("<p>Fight is starting.</p>");
+
+player.summons--;
+setTimeout(startfight,5000);
+}}
+startfightonclick();
 });
+
 
 //INVENTORY CLICK
 $(".slot").click(function() {
@@ -1463,6 +1513,11 @@ function reloadeverything(){
   
 }
 
+
+setInterval(checkexp,15000);
+setInterval(countplayerstats, 2000);
+
+
 function save() {  
   var save = {
     player1: player,
@@ -1475,6 +1530,7 @@ function save() {
 function load() {
 
   var savegame = JSON.parse(localStorage.getItem("save"));
+  setInterval(addsummon,player.summoninterval);
 
   if (savegame != null && savegame != undefined){
   inventory = savegame.inventory1;
@@ -1484,9 +1540,8 @@ function load() {
   countplayerstats();
   displaystats();  
   boss = savegame.boss1;
-  setInterval(addsummon,player.summoninterval);
   $("#bosslevel").text("LVL: "+boss.level);
-  $("#summons").text("1 spawn per: "+Math.floor(player.summoninterval/6000)+"minutes");
+  $("#summons").text("1 spawn per: "+Math.floor(player.summoninterval/10000)+"minutes");
 }
 
 
