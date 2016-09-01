@@ -38,52 +38,83 @@ var player = {
   totalNatureDMG: 0,
   totalHealPow: 0,
   totalLifesteal: 0,
+
+   basicattackcooldown:false,
+   iceboltcooldown:false,
+   fireboltcooldown:false,
+   stormboltcooldown:false,
+   shadowboltcooldown:false,
+   thornscooldown:false,
+   bloodstrikecooldown:false,
+   healcooldown:false,
+   shieldcooldown:false,
+   buffmagiccooldown:false,
+   naturehealcooldown:false,
+   manarestorecooldown:false,
+
+   icebuffcooldown: false,
+   firebuffcooldown: false,
+   stormbuffcooldown: false,
+   shadowbuffcooldown: false,
+   bloodsapcooldown: false,
+   healwingscooldown: false,
+   helmetcooldown: false,
+   attackbuffcooldown:false,
+   magebuffcooldown: false,
+   lotuscooldown: false,
+   magicattackcooldown: false,
+   defensehealcooldown: false,
+
+
+    buffHealth : 0,
+    buffMana : 0,
+    buffDodge : 0,
+    buffMagicPow : 0,
+    buffDamage : 0,
+    buffIceDMG : 0,
+    buffFireDMG : 0,
+    buffStormDMG : 0,
+    buffBloodDMG : 0,
+    buffCritical : 0,
+    buffShadowDMG : 0,
+    buffNatureDMG : 0,
+    buffHealPow : 0,
+    buffLifesteal : 0,
+
+    nerfHealth : 0,
+    nerfMana : 0,
+    nerfDodge : 0,
+    nerfMagicPow : 0,
+    nerfDamage : 0,
+    nerfIceDMG : 0,
+    nerfFireDMG : 0,
+    nerfStormDMG : 0,
+    nerfBloodDMG : 0,
+    nerfCritical : 0,
+    nerfShadowDMG : 0,
+    nerfNatureDMG : 0,
+    nerfHealPow : 0,
+    nerfLifesteal : 0,
+
+
  }
 
-var buffHealth = 0;
-var buffMana = 0;
-var buffDodge = 0;
-var buffMagicPow = 0;
-var buffDamage = 0;
-var buffIceDMG = 0;
-var buffFireDMG = 0;
-var buffStormDMG = 0;
-var buffBloodDMG = 0;
-var buffCritical = 0;
-var buffShadowDMG = 0;
-var buffNatureDMG = 0;
-var buffHealPow = 0;
-var buffLifesteal = 0;
 
-var nerfHealth = 0;
-var nerfMana = 0;
-var nerfDodge = 0;
-var nerfMagicPow = 0;
-var nerfDamage = 0;
-var nerfIceDMG = 0;
-var nerfFireDMG = 0;
-var nerfStormDMG = 0;
-var nerfBloodDMG = 0;
-var nerfCritical = 0;
-var nerfShadowDMG = 0;
-var nerfNatureDMG = 0;
-var nerfHealPow = 0;
-var nerfLifesteal = 0;
 
-var Health = 200*player.level + buffHealth + player.totalHealth - nerfHealth;
-var Mana = 100*player.level + buffMana + player.totalMana - nerfMana;
-var Dodge = 5*player.level + buffDodge + player.totalDodge - nerfDodge;
-var MagicPow = 10*player.level + buffMagicPow + player.totalMagicPow - nerfMagicPow;
-var Damage = 10*player.level + buffDamage + player.totalDamage - nerfDamage;
-var IceDMG = 5*player.level + buffIceDMG + player.totalIceDMG - nerfIceDMG;
-var FireDMG = 5*player.level + buffFireDMG + player.totalFireDMG - nerfFireDMG;
-var StormDMG = 5*player.level + buffStormDMG + player.totalStormDMG - nerfStormDMG;
-var Critical = 1 + buffCritical + player.totalCritical - nerfCritical;
-var BloodDMG = 5*player.level + buffBloodDMG + player.totalBloodDMG - nerfBloodDMG;
-var ShadowDMG = 5*player.level + buffShadowDMG + player.totalShadowDMG - nerfShadowDMG;
-var NatureDMG = 5*player.level + buffNatureDMG + player.totalNatureDMG - nerfNatureDMG;
-var HealPow = 5*player.level + buffHealPow + player.totalHealPow - nerfHealPow;
-var Lifesteal = buffLifesteal + player.totalLifesteal - nerfLifesteal;
+var Health = 200*player.level + player.buffHealth + player.totalHealth - player.nerfHealth;
+var Mana = 100*player.level + player.buffMana + player.totalMana - player.nerfMana;
+var Dodge = 5*player.level + player.buffDodge + player.totalDodge - player.nerfDodge;
+var MagicPow = 10*player.level + player.buffMagicPow + player.totalMagicPow - player.nerfMagicPow;
+var Damage = 10*player.level + player.buffDamage + player.totalDamage - player.nerfDamage;
+var IceDMG = 5*player.level + player.buffIceDMG + player.totalIceDMG - player.nerfIceDMG;
+var FireDMG = 5*player.level + player.buffFireDMG + player.totalFireDMG - player.nerfFireDMG;
+var StormDMG = 5*player.level + player.buffStormDMG + player.totalStormDMG - player.nerfStormDMG;
+var Critical = 1 + player.buffCritical + player.totalCritical - player.nerfCritical;
+var BloodDMG = 5*player.level + player.buffBloodDMG + player.totalBloodDMG - player.nerfBloodDMG;
+var ShadowDMG = 5*player.level + player.buffShadowDMG + player.totalShadowDMG - player.nerfShadowDMG;
+var NatureDMG = 5*player.level + player.buffNatureDMG + player.totalNatureDMG - player.nerfNatureDMG;
+var HealPow = 5*player.level + player.buffHealPow + player.totalHealPow - player.nerfHealPow;
+var Lifesteal = player.buffLifesteal + player.totalLifesteal - player.nerfLifesteal;
 
 var currentplayerhealth;
 var currentplayermana;
@@ -93,40 +124,12 @@ var currentbosshealth;
 
 var battle=false;
 var boss = {
-  level: 1,  
-  health: this.level * 250,
-  damage: this.level * 25,  
-  
+  level: 1,
+  health: this.level * 500 + Math.floor(this.level/10 * 5000),
+  damage: this.level * 15,
+
 }
-
-
- var iceboltmana = 10*boss.level;
- var shieldmana = 10*boss.level;
- var healmana = 14*boss.level;
- var fireboltmana = 10*boss.level;
- var stormboltmana= 10*boss.level;
- var shadowboltmana= 20*boss.level;
- var bloodstrikemana= 20*boss.level;
- var thornsmana= 15*boss.level;
- var buffmagicmana= 30*boss.level;
- var naturehealmana=15*boss.level;
-
-
 var playerdamage = false;
-
-var basicattackcooldown=false;
-var iceboltcooldown=false;
-var fireboltcooldown=false;
-var stormboltcooldown=false;
-var shadowboltcooldown=false;
-var thornscooldown=false;
-var bloodstrikecooldown=false;
-var healcooldown=false;
-var shieldcooldown=false;
-var buffmagiccooldown=false;
-var naturehealcooldown=false;
-var manarestorecooldown=false;
-
 
 var clickeditemid;
 var affixnames = [
@@ -269,20 +272,20 @@ var itemrarity;
 var currentitemid = "";
 // affixes : name > starting stat > stat per level
 var affixes = [
-  ["Health", 50, 25],
-  ["Mana", 50, 25],
-  ["Dodge", 4, 0],
-  ["Critical", 5, 0],
-  ["Damage", 10, 5],
-  ["MagicPow", 20, 10],
-  ["ShadowDMG", 30, 15],
-  ["NatureDMG", 30, 15],
-  ["IceDMG", 30, 15],
-  ["FireDMG", 30, 15],
-  ["BloodDMG", 30, 15],
-  ["StormDMG", 30, 15],
-  ["HealPow", 20, 10],
-  ["Lifesteal",10,5]
+  ["Health", 15, 15],
+  ["Mana", 15, 15],
+  ["Dodge", 7, 0],
+  ["Critical", 10, 0],
+  ["Damage", 5, 5],
+  ["MagicPow", 7, 7],
+  ["ShadowDMG", 10, 10],
+  ["NatureDMG", 10, 10],
+  ["IceDMG", 10, 10],
+  ["FireDMG", 10, 10],
+  ["BloodDMG", 10, 10],
+  ["StormDMG", 10, 10],
+  ["HealPow", 7, 7],
+  ["Lifesteal",6,6]
 ]
 var randomstat;
 var usedstats = [];
@@ -340,328 +343,578 @@ $(document).mousemove(function(e) {
   mouseY = e.pageY;
 });
 
-function critical(x) {
-  var critroll = Math.floor(Math.random() * (100 - Critical)) + 1;
 
-  if (x === "basicattack") {    
-    if (critroll < Critical) {playerdamage = playerdamage * 2;}   
-    $("#rightinfo").prepend("<p>Attack does: "+playerdamage+"DMG</p>");
 
-    currentbosshealth=currentbosshealth-playerdamage;
-    currentplayermana=currentplayermana + Math.floor(Mana/20);
-    if(currentplayerhealth<Health){
-    currentplayerhealth=currentplayerhealth+ Lifesteal;
-   }
+
+function playerattack(object){
+updatespells();
+
+  var i = 0;
+
+
+  function resetcooldown(){
+    player[object.namefunction+"cooldown"] = false;
+    $(object.nameid).removeClass("oncooldown");
+
+  }
+
+  function f() {
+    if (player[object.namefunction +"cooldown"] === false && currentplayermana >= object.manacost && battle === true){
+      player[object.namefunction+"cooldown"]=true;
+
+// 0 means 1 spell use per battle
+      fattack();
+      if (object.cooldown !== 0 ){
+      setTimeout(resetcooldown,object.cooldown,object.namefunction);
     }
-  
-  if (x === "icebolt"){
-    if (critroll < Critical) {playerdamage = playerdamage * 2;}     
-    currentbosshealth=currentbosshealth-playerdamage;
-    $("#rightinfo").prepend("<p>Icebolt does: "+playerdamage+"DMG!");  
-    currentplayermana=currentplayermana - iceboltmana;
-   }  
-
-   if (x === "firebolt"){
-    if (critroll < Critical) {playerdamage = playerdamage * 2;}     
-    currentbosshealth=currentbosshealth-playerdamage;
-    $("#rightinfo").prepend("<p>Firebolt does: "+playerdamage+"DMG!");  
-    currentplayermana=currentplayermana - fireboltmana;
-   }  
-
-    if (x === "stormbolt"){
-    if (critroll < Critical) {playerdamage = playerdamage * 2;}     
-    currentbosshealth=currentbosshealth-playerdamage;
-    $("#rightinfo").prepend("<p>Stormbolt does: "+playerdamage+"DMG!");  
-    currentplayermana=currentplayermana - iceboltmana;
-   }  
-
-  if (x === "bloodstrike"){
-    if (critroll < Critical) {playerdamage = playerdamage * 3;}     
-    currentbosshealth=currentbosshealth-playerdamage;
-    $("#rightinfo").prepend("<p>BloodStrike does: "+playerdamage+"DMG!");  
-    currentplayerhealth=currentplayerhealth - Math.floor(currentplayerhealth/4);
-   }  
-
-   if (x === "shadowbolt"){
-    if (critroll < Critical) {playerdamage = playerdamage * 2;}     
-    
-    function throwshadowbolt(){
-      $("#rightinfo").prepend("<p>Shadow Burst does: "+playerdamage+"DMG!");  
-      currentplayermana=currentplayermana - shadowboltmana;
-      currentbosshealth=currentbosshealth-playerdamage;
     }
-    setTimeout(throwshadowbolt,5000);
-   }  
 
+    function removebuff(){
+      player[object.buffname]= 0;
+    }
+
+    function fattack(){
+
+    if (object.buffamount != 0 && i === 0){
+      player[object.buffname] = object.buffamount;
+      var classname = object.buffname.replace("buff","");
+      $("#rightinfo").prepend("<p class='"+ classname +"'>"+object.buffname.replace("buff","")+" buffed: "+object.buffamount+"</p>");
+      setTimeout (removebuff, object.buffduration);
+
+    }
+
+    if (object.damage > 0 ){
+      var critroll = Math.floor(Math.random() * (100 - Critical)) + 1;
+      var ifcrit = " does ";
+
+        if (critroll < Critical) {
+          object.damage = object.damage * 2;
+          ifcrit = " CRITS for";
+        }
+      currentbosshealth = currentbosshealth - object.damage;
+      $("#rightinfo").prepend("<p>"+ object.nameplayer + ifcrit + ": "+ object.damage + " DMG! </p>");
+    }
+
+    if (object.manacost > 0){
+      currentplayermana = currentplayermana - object.manacost;
+    }
+
+    if (object.healthcost > 0){
+      currentplayerhealth = currentplayerhealth - object.healthcost;
+    }
+
+    if (object.manarestore > 0 ){
+      currentplayermana = currentplayermana + object.manarestore;
+      $("#rightinfo").prepend("<p>You restore: " + object.manarestore + " Mana!")
+    }
+
+    if (object.healthrestore > 0){
+      currentplayerhealth = currentplayerhealth + object.healthrestore;
+      $("#rightinfo").prepend("<p>You restore: " + object.healthrestore + " Health!");
+    }
+
+      i++;
+      if( i < object.repeat ){setTimeout(fattack, object.delay );}
+    }
+  }
+if (player[object.namefunction +"cooldown"] === false && currentplayermana >= object.manacost){
+  $(object.nameid).addClass("oncooldown");
+  setTimeout(f,object.delay);
 }
 
 
-function bloodstrike(){
-  playerdamage= Math.floor(Damage/2 + BloodDMG + Health/5);  
-    
-  function resetbloodstrike(){
-  bloodstrikecooldown=false;
-  buffLifesteal=0;
-  $("#bloodstrike").removeClass("oncooldown");}   
- 
-   if (bloodstrikecooldown===false){
-     bloodstrikecooldown=true;
-      buffLifesteal=BloodDMG;
-      
-     $("#bloodstrike").addClass("oncooldown");
-     critical("bloodstrike");  
-     setTimeout(resetbloodstrike,5000);
-   }
 }
 
-function icebolt(){
-  playerdamage= Math.floor(Damage/2 + IceDMG + MagicPow/2);  
-    
-  function reseticebolt(){
-  iceboltcooldown=false;
-  $("#icebolt").removeClass("oncooldown");}   
- 
-   if (iceboltcooldown===false && currentplayermana > iceboltmana){
-     iceboltcooldown=true;
-     $("#icebolt").addClass("oncooldown");
-     critical("icebolt");  
-     setTimeout(reseticebolt,5000);
-   }
-}
-
-function firebolt(){
-  playerdamage= Math.floor(Damage/2 + FireDMG + MagicPow/2);  
-    
-  function resetfirebolt(){
-  fireboltcooldown=false;
-  $("#firebolt").removeClass("oncooldown");}   
- 
-   if (fireboltcooldown===false && currentplayermana > fireboltmana){
-     fireboltcooldown=true;
-     $("#firebolt").addClass("oncooldown");
-     critical("firebolt");  
-     setTimeout(resetfirebolt,5000);
-   }
-}
-
-function stormbolt(){
-  playerdamage= Math.floor(Damage/2 + StormDMG + MagicPow/2);  
-    
-  function resetstormbolt(){
-  stormboltcooldown=false;
-  $("#stormbolt").removeClass("oncooldown");}   
- 
-   if (stormboltcooldown===false && currentplayermana > stormboltmana){
-     stormboltcooldown=true;
-     $("#stormbolt").addClass("oncooldown");
-     critical("stormbolt");  
-     setTimeout(resetstormbolt,5000);
-   }
-}
-
-function shadowbolt(x){
-  playerdamage= Math.floor(Damage/2 + ShadowDMG*2 + MagicPow);  
-    
-  function resetshadowbolt(){
-  shadowboltcooldown=false;
-  $("#shadowbolt").removeClass("oncooldown");}   
- 
-   if (shadowboltcooldown===false && currentplayermana > shadowboltmana){
-     shadowboltcooldown=true;
-     $("#shadowbolt").addClass("oncooldown");
-     critical("shadowbolt");  
-     setTimeout(resetshadowbolt,5000);
-   }
-}
-
-function basicattack(x) {
-   playerdamage= Damage;
-
-  function resetbasic(){
-  basicattackcooldown=false;
-  $(".-basic").removeClass("oncooldown");    
-  }   
-   if (basicattackcooldown===false){
-     basicattackcooldown=true;
-     $(".-basic").addClass("oncooldown");
-     critical("basicattack");  
-     setTimeout(resetbasic,4000);
-   }
-
-}  
+var spellobject;
 
 
+function updatespells(){
+
+ spellobject = {
+
+    basicattack: {
+      nameplayer: "Attack",
+      namefunction: "basicattack",
+      nameid: ".-basic",
+      damage: Damage,
+      manacost: 0,
+      healthcost: 0,
+      manarestore: Math.floor(Mana/10),
+      healthrestore: Math.floor(Lifesteal/4),
+      repeat: 0,
+      delay: 0,
+      buffname: 0,
+      buffamount: 0,
+      cooldown: 2000,
+    },
+
+    icebolt: {
+      nameplayer: "Icebolt",
+      namefunction: "icebolt",
+      nameid: "#icebolt",
+      damage: Math.floor(Damage/2 + IceDMG + MagicPow/2) ,
+      manacost: boss.level * 15,
+      healthcost: 0,
+      manarestore: 0,
+      healthrestore: 0,
+      repeat: 0,
+      delay: 0,
+      buffname: 0,
+      buffamount: 0,
+      cooldown: 5000,
+    },
+
+    firebolt: {
+      nameplayer: "Firebolt",
+      namefunction: "firebolt",
+      nameid: "#firebolt",
+      damage: Math.floor(Damage/2 + FireDMG + MagicPow/2) ,
+      manacost: boss.level * 15,
+      healthcost: 0,
+      manarestore: 0,
+      healthrestore: 0,
+      repeat: 0,
+      delay: 0,
+      buffname: 0,
+      buffamount: 0,
+      cooldown: 5000,
+    },
 
 
-function shield(){
-   function resetshield(){
-    buffDodge=0;
-    shieldcooldown=false;
-    $("#shield").removeClass("oncooldown"); 
-   }
-  
-  if (shieldcooldown===false && currentplayermana>shieldmana){
-   $("#shield").addClass("oncooldown");    
-  buffDodge=100;
-  currentplayermana=currentplayermana - shieldmana;
-  function removeshield(){
-    buffDodge=0;
+    stormbolt: {
+      nameplayer: "Stormbolt",
+      namefunction: "stormbolt",
+      nameid: "#stormbolt",
+      damage: Math.floor(Damage/2 + StormDMG + MagicPow/2) ,
+      manacost: boss.level * 15,
+      healthcost: 0,
+      manarestore: 0,
+      healthrestore: 0,
+      repeat: 0,
+      delay: 0,
+      buffname: 0,
+      buffamount: 0,
+      cooldown: 5000,
+    },
+
+
+    shadowbolt: {
+      nameplayer: "Shadowbolt",
+      namefunction: "shadowbolt",
+      nameid: "#shadowbolt",
+      damage: Math.floor(Damage/2 + ShadowDMG + MagicPow/2) ,
+      manacost: boss.level * 15,
+      healthcost: 0,
+      manarestore: 0,
+      healthrestore: 0,
+      repeat: 0,
+      delay: 2000,
+      buffname: 0,
+      buffamount: 0,
+      cooldown: 5000,
+    },
+
+
+    bloodstrike: {
+      nameplayer: "Bloodstrike",
+      namefunction: "bloodstrike",
+      nameid: "#bloodstrike",
+      damage: Math.floor(BloodDMG + Damage),
+      manacost: boss.level * 5,
+      healthcost: boss.level * 30,
+      manarestore: 0,
+      healthrestore: 0,
+      repeat: 0,
+      delay: 0,
+      buffname: "buffLifesteal",
+      buffamount: Math.floor(BloodDMG / 2),
+      cooldown: 5000,
+    },
+
+    thorns: {
+      nameplayer: "Thorns",
+      namefunction: "thorns",
+      nameid: "#thorns",
+      damage: Math.floor(Damage/6 + NatureDMG/3 + MagicPow/6) ,
+      manacost: boss.level * 4,
+      healthcost: 0,
+      manarestore: 0,
+      healthrestore: 0,
+      repeat: 3,
+      delay: 1000,
+      buffname: 0,
+      buffamount: 0,
+      cooldown: 5000,
+    },
+
+    natureheal: {
+      nameplayer: "Natureheal",
+      namefunction: "natureheal",
+      nameid: "#natureheal",
+      damage: 0,
+      manacost: boss.level * 5,
+      healthcost: 0,
+      manarestore: 0,
+      healthrestore: Math.floor(NatureDMG/4),
+      repeat: 3,
+      delay: 1000,
+      buffname: "buffNatureDMG",
+      buffamount: Math.floor(NatureDMG),
+      buffduration: 5000,
+      cooldown: 10000,
+    },
+
+    heal: {
+      nameplayer: "Heal",
+      namefunction: "heal",
+      nameid: "#heal",
+      damage: 0,
+      manacost: boss.level * 4,
+      healthcost: 0,
+      manarestore: 0,
+      healthrestore: HealPow*2,
+      repeat: 0,
+      delay: 0,
+      buffname: 0,
+      buffamount: 0,
+      cooldown: 10000,
+    },
+
+    shield: {
+      nameplayer: "Shield",
+      namefunction: "shield",
+      nameid: "#shield",
+      damage: 0,
+      manacost: boss.level * 15,
+      healthcost: 0,
+      manarestore: 0,
+      healthrestore: 0,
+      repeat: 0,
+      delay: 0,
+      buffname: "buffDodge",
+      buffamount: 100,
+      cooldown: 10000,
+      buffduration: 5000,
+
+    },
+
+    manarestore: {
+      nameplayer: "Manarestore",
+      namefunction: "manarestore",
+      nameid: "#manarestore",
+      damage: 0,
+      manacost: 0,
+      healthcost: 0,
+      manarestore:  Math.floor(MagicPow/2),
+      healthrestore:0,
+      repeat: 0,
+      delay: 0,
+      buffname: 0,
+      buffamount: 0,
+      cooldown: 10000,
+    },
+
+    lotus: {
+      nameplayer: "Lotus",
+      namefunction: "lotus",
+      nameid: "#lotus",
+      damage: 0,
+      manacost: 0,
+      healthcost: 0,
+      manarestore:  Math.floor(MagicPow/2),
+      healthrestore:0,
+      repeat: 5,
+      delay: 1000,
+      buffname: 0,
+      buffamount: 0,
+      cooldown: 0,
+    },
+
+    buffmagic: {
+      nameplayer: "Magic Bottle",
+      namefunction: "buffmagic",
+      nameid: "#buffmagic",
+      damage: 0,
+      manacost: boss.level * 25,
+      healthcost: 0,
+      manarestore: 0,
+      healthrestore: 0,
+      repeat: 0,
+      delay: 0,
+      buffname: "buffMagicPow",
+      buffamount: Math.floor(MagicPow/2),
+      cooldown: 10000,
+      buffduration: 5000,
+    },
+
+    icebuff: {
+      nameplayer: "Ice Mask",
+      namefunction: "icebuff",
+      nameid: "#icebuff",
+      damage:  Math.floor(IceDMG / 2),
+      manacost: boss.level * 10,
+      healthcost: 0,
+      manarestore: 0,
+      healthrestore: 0,
+      repeat: 0,
+      delay: 0,
+      buffname: "buffIceDMG",
+      buffamount: Math.floor(IceDMG),
+      cooldown: 10000,
+      buffduration: 5000,
+    },
+
+    firebuff: {
+      nameplayer: "Hand of Fire",
+      namefunction: "firebuff",
+      nameid: "#firebuff",
+      damage:  Math.floor(FireDMG / 2),
+      manacost: boss.level * 10,
+      healthcost: 0,
+      manarestore: 0,
+      healthrestore: 0,
+      repeat: 0,
+      delay: 0,
+      buffname: "buffFireDMG",
+      buffamount: Math.floor(FireDMG),
+      cooldown: 10000,
+      buffduration: 5000,
+    },
+
+    shadowbuff: {
+      nameplayer: "Eye of Shadow",
+      namefunction: "shadowbuff",
+      nameid: "#shadowbuff",
+      damage:  Math.floor(ShadowDMG / 2),
+      manacost: boss.level * 10,
+      healthcost: 0,
+      manarestore: 0,
+      healthrestore: 0,
+      repeat: 0,
+      delay: 0,
+      buffname: "buffShadowDMG",
+      buffamount: Math.floor(ShadowDMG),
+      cooldown: 10000,
+      buffduration: 5000,
+    },
+
+    stormbuff: {
+      nameplayer: "Tree of Storm",
+      namefunction: "stormbuff",
+      nameid: "#stormbuff",
+      damage: Math.floor(StormDMG/2),
+      manacost: boss.level * 10,
+      healthcost: 0,
+      manarestore: 0,
+      healthrestore: 0,
+      repeat: 0,
+      delay: 0,
+      buffname: "buffStormDMG",
+      buffamount: Math.floor(StormDMG ),
+      cooldown: 10000,
+      buffduration: 5000,
+    },
+
+    magebuff: {
+      nameplayer: "Mage Burst",
+      namefunction: "magebuff",
+      nameid: "#magebuff",
+      damage: Math.floor(MagicPow /2),
+      manacost: Math.floor(currentplayermana / 2),
+      healthcost: 0,
+      manarestore: 0,
+      healthrestore: 0,
+      repeat: 0,
+      delay: 0,
+      buffname: "buffMagicPow",
+      buffamount: Math.floor(MagicPow /2),
+      cooldown: 10000,
+      buffduration: 10000,
+    },
+
+    bloodsap: {
+      nameplayer: "Blood Sap",
+      namefunction: "bloodsap",
+      nameid: "#bloodsap",
+      damage: Math.floor(BloodDMG/3),
+      manacost: 0,
+      healthcost: Math.floor(Health / 4),
+      manarestore: 0,
+      healthrestore: Math.floor(BloodDMG/3),
+      repeat: 3,
+      delay: 1000,
+      buffname: "buffBloodDMG",
+      buffamount: Math.floor(BloodDMG ),
+      cooldown: 10000,
+      buffduration: 5000,
+    },
+
+    healwings: {
+      nameplayer: "Heal Wings",
+      namefunction: "healwings",
+      nameid: "#healwings",
+      damage: 0,
+      manacost: Math.floor(Mana / 10),
+      healthcost: 0,
+      manarestore: 0,
+      healthrestore: HealPow,
+      repeat: 5,
+      delay: 800,
+      buffname: 0,
+      buffamount: 0,
+      cooldown: 10000,
+    },
+
+    defenseheal: {
+      nameplayer: "Palace of Gods",
+      namefunction: "defenseheal",
+      nameid: "#defenseheal",
+      damage: 0,
+      manacost: boss.level*7,
+      healthcost: 0,
+      manarestore: 0,
+      healthrestore: Math.floor(HealPow/2),
+      repeat: 3,
+      delay: 1000,
+      buffname: "buffDodge",
+      buffamount: 30,
+      buffduration: 4000,
+      cooldown: 10000,
+    },
+
+    attackbuff: {
+      nameplayer: "Damage Buff",
+      namefunction: "attackbuff",
+      nameid: "#attackbuff",
+      damage: 0,
+      manacost: boss.level * 15,
+      healthcost: 0,
+      manarestore: 0,
+      healthrestore: 0,
+      repeat: 0,
+      delay: 0,
+      buffname: "buffDamage",
+      buffamount: Math.floor(Damage),
+      cooldown: 10000,
+      buffduration: 10000,
+    },
+
+    helmet: {
+      nameplayer: "Vigor Of Vikings",
+      namefunction: "helmet",
+      nameid: "#helmet",
+      damage: 0,
+      manacost: boss.level * 15,
+      healthcost: 0,
+      manarestore: 0,
+      healthrestore: 0,
+      repeat: 0,
+      delay: 0,
+      buffname: "buffHealth",
+      buffamount: Math.floor(Mana / 2),
+      cooldown: 10000,
+      buffduration: 15000,
+    },
+
+    magicattack: {
+      nameplayer: "Finger Bolt",
+      namefunction: "magicattack",
+      nameid: "#magicattack",
+      damage: MagicPow,
+      manacost: boss.level * 10,
+      healthcost: 0,
+      manarestore: 0,
+      healthrestore: 0,
+      repeat: 0,
+      delay: 0,
+      buffname: 0,
+      buffamount: 0,
+      cooldown: 7000,
+      buffduration: 0,
+    },
+
+
   }
 
-  setTimeout(removeshield,5000);    
-  setTimeout(resetshield,10000);
-  }
-  
+
 }
 
-function buffmagic(){
-
-   function resetbuffmagic(){
-    buffmagiccooldown=false;
-    $("#buffmagic").removeClass("oncooldown"); 
-   }  
-
-   function removebuffmagic(){
-    buffMagicPow=0;
-   }
-
-  if (buffmagiccooldown===false && currentplayermana > buffmagicmana){
-   $("#buffmagic").addClass("oncooldown"); 
-   buffMagicPow=MagicPow;    
-   setTimeout(resetbuffmagic,10000);
-   setTimeout(removebuffmagic,5000);
-   currentplayermana=currentplayermana- buffmagicmana;
-   $("#rightinfo").prepend("<p>Magic Power increased by:  "+MagicPow+"!");  
-  }
-  
-}
+updatespells();
 
 
-function heal(){
-   function resetheal(){
-    healcooldown=false;
-    $("#heal").removeClass("oncooldown"); 
-   }  
+$("#magicattack").click(function(){playerattack(spellobject.magicattack);});
+$("#helmet").click(function(){playerattack(spellobject.helmet);});
+$("#defenseheal").click(function(){playerattack(spellobject.defenseheal);});
+$("#attackbuff").click(function(){playerattack(spellobject.attackbuff);});
+$("#lotus").click(function(){playerattack(spellobject.lotus);});
+$("#healwings").click(function(){playerattack(spellobject.healwings);});
+$("#bloodsap").click(function(){playerattack(spellobject.bloodsap);});
+$("#magebuff").click(function(){playerattack(spellobject.magebuff);});
+$("#shadowbuff").click(function(){playerattack(spellobject.shadowbuff);});
+$("#stormbuff").click(function(){playerattack(spellobject.stormbuff);});
+$("#firebuff").click(function(){playerattack(spellobject.firebuff);});
+$("#icebuff").click(function(){playerattack(spellobject.icebuff);});
 
-   if (healcooldown===false && currentplayermana > healmana){
-   $("#heal").addClass("oncooldown"); 
-   currentplayerhealth=currentplayerhealth + HealPow;  
-    $("#rightinfo").prepend("<p>You Heal for:  "+HealPow+"HP!");  
-   setTimeout(resetheal,10000);   
-   currentplayermana=currentplayermana- healmana;
-  }
-  
-}
-
-function manarestore(){
-   function resetmanarestore(){
-    manarestorecooldown=false;
-    $("#manarestore").removeClass("oncooldown"); 
-   }  
-
-   if (manarestorecooldown===false){
-   $("#manarestore").addClass("oncooldown"); 
-   currentplayermana= currentplayermana + Math.floor(HealPow/2);   
-   $("#rightinfo").prepend("<p>Mana restored: "+Math.floor(HealPow/2)+"!");
-   setTimeout(resetmanarestore,10000);   
-   }
-  
-}
+$("#icebolt").click(function(){playerattack(spellobject.icebolt);});
+$("#firebolt").click(function(){playerattack(spellobject.firebolt);});
+$("#stormbolt").click(function(){playerattack(spellobject.stormbolt);});
+$("#thorns").click(function(){playerattack(spellobject.thorns);});
+$("#shadowbolt").click(function(){playerattack(spellobject.shadowbolt);});
+$("#heal").click(function(){playerattack(spellobject.heal);});
+$("#natureheal").click(function(){playerattack(spellobject.natureheal);});
+$("#manarestore").click(function(){playerattack(spellobject.manarestore);});
+$("#bloodstrike").click(function(){playerattack(spellobject.bloodstrike);});
+$("#shield").click(function(){playerattack(spellobject.shield);});
+$("#buffmagic").click(function(){playerattack(spellobject.buffmagic);});
+$(".-basic").click(function(){playerattack(spellobject.basicattack);});
 
 
+// keyboard spell clicking support! Woo :D
+$('body').bind('keypress',function (event){
+  if (event.keyCode === 49){$(".spell1").trigger('click');}
+  if (event.keyCode === 50){$(".spell2").trigger('click');}
+  if (event.keyCode === 51){$(".spell3").trigger('click');}
+  if (event.keyCode === 52){$(".spell4").trigger('click');}
+  if (event.keyCode === 53){$(".spell5").trigger('click');}
+  if (event.keyCode === 54){$(".spell6").trigger('click');}
+  if (event.keyCode === 55){$(".spell7").trigger('click');}
+  if (event.keyCode === 56){$(".spell8").trigger('click');}
+  if (event.keyCode === 57){$(".spell9").trigger('click');}
+
+  if (event.charCode === 49){$(".spell1").trigger('click');}
+  if (event.charCode === 50){$(".spell2").trigger('click');}
+  if (event.charCode === 51){$(".spell3").trigger('click');}
+  if (event.charCode === 52){$(".spell4").trigger('click');}
+  if (event.charCode === 53){$(".spell5").trigger('click');}
+  if (event.charCode === 54){$(".spell6").trigger('click');}
+  if (event.charCode === 55){$(".spell7").trigger('click');}
+  if (event.charCode === 56){$(".spell8").trigger('click');}
+  if (event.charCode === 57){$(".spell9").trigger('click');}
+
+});
 
 
-function thorns(){
-      
-  function resetthorns(){
-  thornscooldown=false;
-  $("#thorns").removeClass("oncooldown");}   
- 
-  function thornsdamage(){
-  playerdamage= Math.floor(Damage/2 + NatureDMG/2); 
-  currentbosshealth=currentbosshealth-playerdamage;
-  currentplayermana=currentplayermana-thornsmana;
-  $("#rightinfo").prepend("<p>Thorns does:  "+playerdamage+"DMG!");
-  }
-
-   if (thornscooldown===false && currentplayermana > thornsmana){
-     thornscooldown=true;
-     $("#thorns").addClass("oncooldown");
-      setTimeout(resetthorns,5000);
-      setTimeout(thornsdamage,1000);
-      setTimeout(thornsdamage,2000);
-      setTimeout(thornsdamage,3000);
-
-   }
-}
-
-
-function nheal(){
-      console.log("sdsdsdsd");
-
-  function resetnatureheal(){
-  naturehealcooldown=false;
-  $("#natureheal").removeClass("oncooldown");
-}   
- 
-  function naturehealdamage(){
-  playerdamage= Math.floor(NatureDMG/3); 
-  currentplayerhealth=currentplayerhealth+playerdamage;
-  currentplayermana=currentplayermana-naturehealmana;
-  $("#rightinfo").prepend("<p>Nature heals for: "+playerdamage+"HP!");
-  }
-
-   if (naturehealcooldown===false && currentplayermana > naturehealmana){
-      naturehealcooldown=true;
-      $("#natureheal").addClass("oncooldown");
-      setTimeout(resetnatureheal,5000);
-      setTimeout(naturehealdamage,1000);
-      setTimeout(naturehealdamage,2000);
-      setTimeout(naturehealdamage,3000);
-
-   }
-}
-
-
-
- $("#basic").click(function(){basicattack();});
- $("#icebolt").click(function(){icebolt();});
- $("#shield").click(function(){shield();});
- $("#firebolt").click(function(){firebolt();});
- $("#stormbolt").click(function(){stormbolt();}); 
- $("#shadowbolt").click(function(){shadowbolt();}); 
- $("#bloodstrike").click(function(){bloodstrike();}); 
- $("#thorns").click(function(){thorns();}); 
- $("#heal").click(function(){heal();}); 
- $("#natureheal").click(function(){nheal();});  
- $("#buffmagic").click(function(){buffmagic();}); 
- $("#manarestore").click(function(){manarestore();}); 
-
-
-  
 
 function displaystats() {
 
-$("#health").text(Health);
-$("#mana").text(Mana);
-$("#damage").text(Damage);  
-$("#critical").text(Critical);
-$("#dodge").text(Dodge);
-$("#healpow").text(HealPow);
-$("#magicpow").text(MagicPow);
-$("#ice").text(IceDMG);
-$("#fire").text(FireDMG);
-$("#storm").text(StormDMG);
-$("#nature").text(NatureDMG);
-$("#shadow").text(ShadowDMG);
-$("#blood").text(BloodDMG);
-$("#lifesteal").text(Lifesteal);
+$("#health").text(Math.floor(Health));
+$("#mana").text(Math.floor(Mana));
+$("#damage").text(Math.floor(Damage));
+$("#critical").text(Math.floor(Critical));
+$("#dodge").text(Math.floor(Dodge));
+$("#healpow").text(Math.floor(HealPow));
+$("#magicpow").text(Math.floor(MagicPow));
+$("#ice").text(Math.floor(IceDMG));
+$("#fire").text(Math.floor(FireDMG));
+$("#storm").text(Math.floor(StormDMG));
+$("#nature").text(Math.floor(NatureDMG));
+$("#shadow").text(Math.floor(ShadowDMG));
+$("#blood").text(Math.floor(BloodDMG));
+$("#lifesteal").text(Math.floor(Lifesteal));
 
-$("#gold").text("Gold: "+player.gold);
-$("#level").text("Level: "+player.level);  
+$("#gold").text("Gold: "+Math.floor(player.gold));
+$("#level").text("Level: "+player.level);
 }
-
-
 
 
 function countplayerstats() {
@@ -693,20 +946,21 @@ function countplayerstats() {
     }
   } // for loops d f
 
-  Health = 200*player.level + buffHealth + player.totalHealth - nerfHealth;
-  Mana = 100*player.level + buffMana + player.totalMana - nerfMana;
-  Dodge = buffDodge + player.totalDodge - nerfDodge;
-  MagicPow = 20*player.level + buffMagicPow + player.totalMagicPow - nerfMagicPow;
-  Damage = 10*player.level + buffDamage + player.totalDamage - nerfDamage;
-  IceDMG = 15*player.level + buffIceDMG + player.totalIceDMG - nerfIceDMG;
-  FireDMG = 15*player.level + buffFireDMG + player.totalFireDMG - nerfFireDMG;
-  StormDMG = 15*player.level + buffStormDMG + player.totalStormDMG - nerfStormDMG;
-  Critical = 1 + buffCritical + player.totalCritical - nerfCritical;
-  BloodDMG = 15*player.level + buffBloodDMG + player.totalBloodDMG - nerfBloodDMG;
-  ShadowDMG = 15*player.level + buffShadowDMG + player.totalShadowDMG - nerfShadowDMG;
-  NatureDMG = 15*player.level + buffNatureDMG + player.totalNatureDMG - nerfNatureDMG;
-  HealPow = 15*player.level + buffHealPow + player.totalHealPow - nerfHealPow;
-  Lifesteal = 15*player.level + buffLifesteal + player.totalLifesteal - nerfLifesteal;
+  Health = 200*player.level + player.buffHealth + player.totalHealth - player.nerfHealth;
+  Mana = 100*player.level + player.buffMana + player.totalMana - player.nerfMana;
+  Dodge = player.buffDodge + player.totalDodge - player.nerfDodge;
+  MagicPow = 20*player.level + player.buffMagicPow + player.totalMagicPow - player.nerfMagicPow;
+  Damage = 10*player.level + player.buffDamage + player.totalDamage - player.nerfDamage;
+  IceDMG = 15*player.level + player.buffIceDMG + player.totalIceDMG - player.nerfIceDMG;
+  FireDMG = 15*player.level + player.buffFireDMG + player.totalFireDMG - player.nerfFireDMG;
+  StormDMG = 15*player.level + player.buffStormDMG + player.totalStormDMG - player.nerfStormDMG;
+  Critical = 1 + player.buffCritical + player.totalCritical - player.nerfCritical;
+  BloodDMG = 15*player.level + player.buffBloodDMG + player.totalBloodDMG - player.nerfBloodDMG;
+  ShadowDMG = 15*player.level + player.buffShadowDMG + player.totalShadowDMG - player.nerfShadowDMG;
+  NatureDMG = 15*player.level + player.buffNatureDMG + player.totalNatureDMG - player.nerfNatureDMG;
+  HealPow = 15*player.level + player.buffHealPow + player.totalHealPow - player.nerfHealPow;
+  Lifesteal = 15*player.level + player.buffLifesteal + player.totalLifesteal - player.nerfLifesteal;
+
 
   if (Dodge<0){Dodge=0;}
   if (MagicPow<0){MagicPow=0}
@@ -723,6 +977,7 @@ function countplayerstats() {
   if (BloodDMG<0){BloodDMG=0;}
   if (Mana<0){Mana=0;}
 
+  updatespells();
   displaystats();
 
     } // count stats function
@@ -731,7 +986,6 @@ var finishedgenerating = true;
 
 
 function upgradeitem(){
-
 
 var theitem=inventory[clickeditemid];
 var upgraderarity= Math.floor(Math.random()*rarities.length);
@@ -742,7 +996,7 @@ if (theitem["upgrade"]["level"] < 5 && player.gold > theitem["level"]*5){
   var randomupgradestat= Math.floor(Math.random()*affixes.length);
   var upgradestatamount= Math.floor((upgraderarity+1)*(theitem.level*affixes[randomupgradestat][2])/5);
   var maxupgradestatamount= Math.floor(5*(theitem.level*affixes[randomupgradestat][2])/5);
-  var upgradestatrarity= rarities[upgraderarity];  
+  var upgradestatrarity= rarities[upgraderarity];
 
   theitem.upgrade.stats[affixes[randomupgradestat][0]] = [upgradestatamount, maxupgradestatamount, upgradestatrarity];
   theitem.upgrade.level++;
@@ -750,7 +1004,7 @@ if (theitem["upgrade"]["level"] < 5 && player.gold > theitem["level"]*5){
  function countitemstats(){
 
   for (var i=0;i<affixes.length;i++){
-   
+
     theitem.totalstats[affixes[i][0]]=theitem.stats[affixes[i][0]][0] + theitem.upgrade.stats[affixes[i][0]][0];
   }
 
@@ -758,14 +1012,47 @@ if (theitem["upgrade"]["level"] < 5 && player.gold > theitem["level"]*5){
 countitemstats();
 
  } // if upgrade level
+} // function upgrade
+
+ function upgradeitemonchar(){
+
+  theitem=player[clickeditemid];
+
+ upgraderarity= Math.floor(Math.random()*rarities.length);
+
+ if (theitem["upgrade"]["level"] < 5 && player.gold > theitem["level"]*5){
+   player.gold = player.gold - theitem["level"]*5;
+
+    randomupgradestat= Math.floor(Math.random()*affixes.length);
+    upgradestatamount= Math.floor((upgraderarity+1)*(theitem.level*affixes[randomupgradestat][2])/5);
+    maxupgradestatamount= Math.floor(5*(theitem.level*affixes[randomupgradestat][2])/5);
+    upgradestatrarity= rarities[upgraderarity];
+
+   theitem.upgrade.stats[affixes[randomupgradestat][0]] = [upgradestatamount, maxupgradestatamount, upgradestatrarity];
+   theitem.upgrade.level++;
+
+  function countitemstats(){
+
+   for (var i=0;i<affixes.length;i++){
+
+     theitem.totalstats[affixes[i][0]]=theitem.stats[affixes[i][0]][0] + theitem.upgrade.stats[affixes[i][0]][0];
+   }
+
+  }
+ countitemstats();
+
+  } // if upgrade level
 
 
 } // function upgrade
 
+
 $("#upgrade").click(function(){
 upgradeitem();
 });
-
+$("#upgradeitemonchar").click(function(){
+upgradeitemonchar();
+});
 
 function createitem() {
   finishedgenerating = false;
@@ -774,7 +1061,7 @@ function createitem() {
   var randomaffix = Math.floor(Math.random() * affixnames.length);
   var affixnumber = Math.floor(Math.random() * rarities.length) + 1;
   usedstats = [];
-  // now generate the item 
+  // now generate the item
   function randomitem(slot) {
 
     for (var i = 0; i < affixnumber; i++) {
@@ -820,20 +1107,20 @@ function createitem() {
       var statmax = affixes[randomstat][1] + (affixes[randomstat][2] * boss.level);
 
       var statcolor = "Common";
-      if (statnumber > statmax / 10) {
+      if (statnumber > statmax * 0.2) {
         statcolor = "Magic"
       };
-      if (statnumber > statmax / 4) {
+      if (statnumber > statmax * 0.4) {
         statcolor = "Rare"
       };
-      if (statnumber > statmax / 2) {
+      if (statnumber > statmax * 0.6) {
         statcolor = "Epic"
       };
-      if (statnumber > statmax / 1.2) {
+      if (statnumber > statmax * 0.8) {
         statcolor = "Legendary"
       };
 
-      //we finalize the item stats here  
+      //we finalize the item stats here
       generateditem.stats[affixes[randomstat][0]] = [statnumber, statmax, statcolor];
       generateditem.totalstats[affixes[randomstat][0]] = statnumber;
     }
@@ -859,7 +1146,7 @@ function createitem() {
   // this choses item slot
 
   randomitem(randomslot);
-}  
+}
 
 
 //so right click doesn't fuck up my options menu
@@ -870,6 +1157,7 @@ document.oncontextmenu = function() {
 
 function addsummon(){
 player.summonbosscounter++;
+
 
 if (player.summonbosscounter > 5){
 player.summonbosscounter=0;
@@ -896,39 +1184,38 @@ function checkexp(){
 
 function startfight(){
   battle=true;
-  
-    
-  
-  $("#leftinfo").prepend("<p>Fight has started!</p>");  
+
+  $("#leftinfo").prepend("<p>Fight has started!</p>");
 
 
- basicattackcooldown=false;
- iceboltcooldown=false;
- fireboltcooldown=false;
- stormboltcooldown=false;
- shadowboltcooldown=false;
- thornscooldown=false;
- bloodstrikecooldown=false;
- healcooldown=false;
- shieldcooldown=false;
- buffmagiccooldown=false;
- naturehealcooldown=false;
- manarestorecooldown=false;
+ player.basicattackcooldown=false;
+ player.iceboltcooldown=false;
+ player.fireboltcooldown=false;
+ player.stormboltcooldown=false;
+ player.shadowboltcooldown=false;
+ player.thornscooldown=false;
+ player.bloodstrikecooldown=false;
+ player.healcooldown=false;
+ player.shieldcooldown=false;
+ player.buffmagiccooldown=false
+ player.naturehealcooldown=false;
+ player.manarestorecooldown=false;
 
- $(".oncooldown").removeClass("oncooldown");  
+ player.icebuffcooldown= false;
+ player.firebuffcooldown= false;
+ player.stormbuffcooldown= false;
+ player.shadowbuffcooldown= false;
+ player.bloodsapcooldown= false;
+ player.healwingscooldown= false;
+ player.helmetcooldown= false;
+ player.attackbuffcooldown=false;
+ player.magebuffcooldown= false;
+ player.lotuscooldown= false;
+ player.magicattackcooldown= false;
+ player.defensehealcooldown= false;
 
-  
 
- iceboltmana = 10*boss.level;
- shieldmana = 10*boss.level;
- healmana = 14*boss.level;
- fireboltmana = 10*boss.level;
- stormboltmana= 10*boss.level;
- shadowboltmana= 20*boss.level;
- bloodstrikemana= 20*boss.level;
- thornsmana= 15*boss.level;
- buffmagicmana= 30*boss.level;
- naturehealmana=15*boss.level;
+ $(".oncooldown").removeClass("oncooldown");
 
 
   resetplayerstats();
@@ -936,9 +1223,10 @@ function startfight(){
   var bossname="boss"+randombossname+" "+" mobsprites bosspic";
   var bosshitroll;
 
-  boss.health = boss.level * 250;
-  boss.damage = boss.level*25;
-  
+// there is bonus every 25 levels so you have to stop and get better gear, this is to balance the game
+  boss.health = boss.level * 500 + (Math.floor(boss.level/25)*10000)+(Math.floor(boss.level/100)*10000) ;
+  boss.damage = boss.level*15 + (Math.floor(boss.level/25)*150)+(Math.floor(boss.level/100)*150);
+
 
    currentbosshealth = boss.health;
    currentplayerhealth = Health;
@@ -951,8 +1239,6 @@ function startfight(){
   $("#bosshptext").text(currentbosshealth+"/"+currentbosshealth);
   $("#bosshpbar").css("width","100%");
 
-
-  
 
   function updatehealthbar(){
     var barpercent = currentbosshealth / boss.health*100;
@@ -972,8 +1258,8 @@ function startfight(){
 
    function bossattack(){
      bossdamage= boss.damage;
-     bosscritdamage=boss.damage*3;
-     bosshitroll = Math.floor(Math.random() * (100 - Dodge)) + 1;    
+     bosscritdamage=boss.damage*5;
+     bosshitroll = Math.floor(Math.random() * (100 - Dodge)) + 1;
 
 
       function attackbasicplayer(){
@@ -990,7 +1276,7 @@ function startfight(){
        bosshitroll = Math.floor(Math.random() * (100 - Dodge)) + 1;
 
       if (bosshitroll > Dodge){
-       $("#leftinfo").prepend("<p>Boss CRITS for: " + bosscritdamage +" DMG!"+"</p>");       
+       $("#leftinfo").prepend("<p>Boss CRITS for: " + bosscritdamage +" DMG!"+"</p>");
        currentplayerhealth = currentplayerhealth - bosscritdamage;}
       if(bosshitroll < Dodge){$("#leftinfo").prepend("<p>Boss Missed the crit.</p>");}
 
@@ -998,85 +1284,84 @@ function startfight(){
 
 
     function castdodgereduce(){
-      nerfDodge = 1000;
+      player.nerfDodge = 1000;
       function dodgereduceremove(){
-        nerfDodge=0;
+        player.nerfDodge=0;
       }
       setTimeout(dodgereduceremove,10000);
-      $("#leftinfo").prepend("<p> Boss Casts NERF DODGE!</p>");
+      $("#leftinfo").prepend("<p  class='dodge'> Boss Casts NERF DODGE!</p>");
     }
-       
+
     function castHealPowreduce(){
-      nerfHealPow = 999999991000;
+      player.nerfHealPow = 999999991000;
       function HealPowreduceremove(){
-        nerfHealPow=0;
+        player.nerfHealPow=0;
       }
       setTimeout(HealPowreduceremove,10000);
-      $("#leftinfo").prepend("<p> Boss Casts NERF HealPow!</p>");
+      $("#leftinfo").prepend("<p  class='heal' > Boss Casts NERF HealPow!</p>");
     }
 
 
     function castIceDMGreduce(){
-      nerfIceDMG = 999991000;
+      player.nerfIceDMG = 999991000;
       function IceDMGreduceremove(){
-        nerfIceDMG=0;
+        player.nerfIceDMG=0;
       }
       setTimeout(IceDMGreduceremove,10000);
-      $("#leftinfo").prepend("<p> Boss Casts NERF IceDMG!</p>");
+      $("#leftinfo").prepend("<p  class='ice'> Boss Casts NERF IceDMG!</p>");
     }
 
 
     function castFireDMGreduce(){
-      nerfFireDMG = 9999991000;
+      player.nerfFireDMG = 9999991000;
       function FireDMGreduceremove(){
-        nerfFireDMG=0;
+        player.nerfFireDMG=0;
       }
       setTimeout(FireDMGreduceremove,10000);
-      $("#leftinfo").prepend("<p> Boss Casts NERF FireDMG!</p>");
+      $("#leftinfo").prepend("<p  class='fire'> Boss Casts NERF FireDMG!</p>");
     }
 
     function castStormDMGreduce(){
-      nerfStormDMG = 9999991000;
+      player.nerfStormDMG = 9999991000;
       function StormDMGreduceremove(){
-        nerfStormDMG=0;
+        player.nerfStormDMG=0;
       }
       setTimeout(StormDMGreduceremove,10000);
-      $("#leftinfo").prepend("<p> Boss Casts NERF StormDMG!</p>");
+      $("#leftinfo").prepend("<p  class='storm'> Boss Casts NERF StormDMG!</p>");
     }
 
     function castShadowDMGreduce(){
-      nerfShadowDMG = 9999991000;
+      player.nerfShadowDMG = 9999991000;
       function ShadowDMGreduceremove(){
-        nerfShadowDMG=0;
+        player.nerfShadowDMG=0;
       }
       setTimeout(ShadowDMGreduceremove,10000);
-      $("#leftinfo").prepend("<p> Boss Casts NERF ShadowDMG!</p>");
+      $("#leftinfo").prepend("<p  class='shadow'> Boss Casts NERF ShadowDMG!</p>");
     }
 
     function castNatureDMGreduce(){
-      nerfNatureDMG = 9999991000;
+      player.nerfNatureDMG = 9999991000;
       function NatureDMGreduceremove(){
-        nerfNatureDMG=0;
+        player.nerfNatureDMG=0;
       }
       setTimeout(NatureDMGreduceremove,10000);
-      $("#leftinfo").prepend("<p> Boss Casts NERF NatureDMG!</p>");
+      $("#leftinfo").prepend("<p class='nature'> Boss Casts NERF NatureDMG!</p>");
     }
 
     function castBloodDMGreduce(){
-      nerfBloodDMG = 9999991000;
+      player.nerfBloodDMG = 9999991000;
       function BloodDMGreduceremove(){
-        nerfBloodDMG=0;
+        player.nerfBloodDMG=0;
       }
       setTimeout(BloodDMGreduceremove,10000);
-      $("#leftinfo").prepend("<p> Boss Casts NERF BloodDMG!</p>");
+      $("#leftinfo").prepend("<p class='danger'> Boss Casts NERF BloodDMG!</p>");
     }
-
 
 
       var bosschoosespell = Math.floor(Math.random()*100);
 
 
-      if (bosschoosespell <10){$("#leftinfo").prepend("<p> Boss Is preparing a CRITICAL!</p>");setTimeout(critplayer,3000);}      
+      if (bosschoosespell <10){$("#leftinfo").prepend("<p class='danger'> CRITICAL INCOMING!</p>");setTimeout(critplayer,3000);}
       else if (bosschoosespell < 12){castBloodDMGreduce();}
       else if (bosschoosespell < 14){castIceDMGreduce();}
       else if (bosschoosespell < 16){castFireDMGreduce();}
@@ -1086,12 +1371,10 @@ function startfight(){
       else if (bosschoosespell < 24){castShadowDMGreduce();}
       else if (bosschoosespell <30){castdodgereduce();}
       else if (bosschoosespell < 101){attackbasicplayer();}
-    
-    
+
+
     updatehealthbar();
   }
-
-
 
 
   function checkdeath(){
@@ -1115,19 +1398,21 @@ function startfight(){
     if (currentplayerhealth < 1) {
       battle=false;
       clearInterval(bossattack);
-      clearInterval(checkdeath);      
+      clearInterval(checkdeath);
       resetplayerstats();
       countplayerstats();
       currentplayerhealth = Health;
       currentplayermana = Mana;
       currentplayerhealth = Health;
       currentbosshealth=boss.health;
-      updatehealthbar();      
+      updatehealthbar();
     }
 
     // so mana doesn't overflow..
     if (currentplayermana > Mana){currentplayermana=Mana};
-    if (currentplayerhealth > Health){currentplayerHealth=Health};
+    if (currentplayerhealth > Health){currentplayerhealth=Health};
+    if (currentplayermana < 0){currentplayermana=0};
+
 
     updatehealthbar();
   }
@@ -1141,20 +1426,16 @@ function startfight(){
 
 
 
-
 $("#summonfaster").click(function(){
 if (player.summoninterval-10000 > 0){
 player.summoninterval=player.summoninterval - 10000;
-$("#summons").text("1 spawn per: "+Math.floor(player.summoninterval/10000)+"minutes");
+$("#summons").text("1 spawn per: "+Math.floor(player.summoninterval/10000)+"min");
 }
 });
 
 $("#summonslower").click(function(){
-
 player.summoninterval=player.summoninterval + 10000;
-$("#summons").text("1 spawn per: "+Math.floor(player.summoninterval/10000)+"minutes");
-console.log(player.summoninterval);
-
+$("#summons").text("1 spawn per: "+Math.floor(player.summoninterval/10000)+"min");
 });
 
 
@@ -1182,7 +1463,7 @@ $(".slot").mousedown(function(e) {
    $("#showdiv1").css({
     'display': 'none'
   });
-    
+
     $("#showdiv").css({
       'top': mouseY,
       'left': mouseX,
@@ -1240,7 +1521,7 @@ $("#main").click(function() {
     $("#desc").css({
     'display': 'none'
   });
-   
+
 
 });
 
@@ -1277,8 +1558,8 @@ function sellall(){
 $("#sell").click(function() {
 
   function sell() {
-    
-  // this is to stop bug when you click an empty inventory slot...  
+
+  // this is to stop bug when you click an empty inventory slot...
   if (inventory[clickeditemid]["value"] != undefined && inventory[clickeditemid]["value"] != null){
   player.gold = player.gold + inventory[clickeditemid]["value"];
   $("#" + clickeditemid).empty();
@@ -1315,11 +1596,11 @@ $("#fightbutton").click(function(){
 function startfightonclick(){
 
 if (player.summons < 1 && battle !=true){
-("#leftinfo").prepend("<p>You don't have enough Boss summons!</p>");
+$("#leftinfo").prepend("<p>You don't have enough Boss summons!</p>");
   }
 
 if (battle == true){
-("#leftinfo").prepend("<p>Cannot start battle while in combat</p>");
+$("#leftinfo").prepend("<p>Cannot start battle while in combat</p>");
 }
 if (player.summons > 0 && battle != true ) {
 
@@ -1339,16 +1620,20 @@ startfightonclick();
 $(".slot").click(function() {
 
   clickeditemid = this.id; // this selects the item id so it can be used for other things in the menu
- 
+
   $('td').children().removeClass("selected");
   $("#" + clickeditemid).children().addClass("selected");
+  var rarityarr = [];
 
   $("#info").empty();
   $("#upgradeinfo").empty();
+  $("#powerlevel").empty();
+
   for (var y = 0; y < affixes.length; y++) {
     var statstuff = inventory[clickeditemid]["stats"][affixes[y][0]];
     var upgradestatstuff = inventory[clickeditemid]["upgrade"]["stats"][affixes[y][0]];
-
+    rarityarr.push(inventory[clickeditemid]["upgrade"]["stats"][affixes[y][0]][2] );
+    rarityarr.push(inventory[clickeditemid]["stats"][affixes[y][0]][2] );
 
     if (y === 0) {
       var namerarity = inventory[clickeditemid]["rarity"];
@@ -1373,7 +1658,22 @@ $(".slot").click(function() {
     if (y === affixes.length - 1) {
       $("#info").append("<p>Item Level: " + inventory[clickeditemid]["level"] + "</p>");
     }
-  }
+
+    }
+
+    var totalperc = 0;
+    for (var i=0; i<rarityarr.length;i++){
+      if (rarityarr[i] === "Common"){totalperc = totalperc + 1;}
+      if (rarityarr[i] === "Magic"){totalperc = totalperc + 2;}
+      if (rarityarr[i] === "Rare"){totalperc = totalperc + 3;}
+      if (rarityarr[i] === "Epic"){totalperc = totalperc + 4;}
+      if (rarityarr[i] === "Legendary"){totalperc = totalperc + 5;}
+    }
+
+    totalperc = Math.floor(totalperc / 45 * 100)+"%";
+    inventory[clickeditemid].powerlevel = totalperc;
+    $("#powerlevel").text("Power Level:"+inventory[clickeditemid].powerlevel);
+
 });
 
 //CHARACTER CLICK
@@ -1382,11 +1682,17 @@ $(".slot1").click(function() {
 
   $('td').children().removeClass("selected");
   $("#" + clickeditemid).children().addClass("selected");
+  var rarityarr =[];
 
+  $("#powerlevel").empty();
   $("#info").empty();
+  $("#upgradeinfo").empty();
+
   for (var y = 0; y < affixes.length; y++) {
     var statstuff = player[clickeditemid]["stats"][affixes[y][0]];
     var upgradestatstuff = player[clickeditemid]["upgrade"]["stats"][affixes[y][0]];
+    rarityarr.push(player[clickeditemid]["upgrade"]["stats"][affixes[y][0]][2] );
+    rarityarr.push(player[clickeditemid]["stats"][affixes[y][0]][2] );
 
 
     if (y === 0) {
@@ -1412,6 +1718,19 @@ $(".slot1").click(function() {
     }
   }
 
+  var totalperc = 0;
+  for (var i=0; i<rarityarr.length;i++){
+    if (rarityarr[i] === "Common"){totalperc = totalperc + 1;}
+    if (rarityarr[i] === "Magic"){totalperc = totalperc + 2;}
+    if (rarityarr[i] === "Rare"){totalperc = totalperc + 3;}
+    if (rarityarr[i] === "Epic"){totalperc = totalperc + 4;}
+    if (rarityarr[i] === "Legendary"){totalperc = totalperc + 5;}
+  }
+
+  totalperc = Math.floor(totalperc / 45 * 100)+"%";
+  player[clickeditemid].powerlevel = totalperc;
+  $("#powerlevel").text("Power Level:"+player[clickeditemid].powerlevel);
+
 });
 
 
@@ -1434,54 +1753,37 @@ $(".slot1").mousedown(function(e) {
 });
 
 
-// keyboard spell clicking support! Woo :D
-$('body').bind('keypress',function (event){
-  console.log(player);
-  if (event.keyCode === 49){$(".spell1").trigger('click');}
-  if (event.keyCode === 50){$(".spell2").trigger('click');}
-  if (event.keyCode === 51){$(".spell3").trigger('click');}
-  if (event.keyCode === 52){$(".spell4").trigger('click');}
-  if (event.keyCode === 53){$(".spell5").trigger('click');}
-  if (event.keyCode === 54){$(".spell6").trigger('click');}
-  if (event.keyCode === 55){$(".spell7").trigger('click');}
-  if (event.keyCode === 56){$(".spell8").trigger('click');}
-  if (event.keyCode === 57){$(".spell9").trigger('click');}
-  if (event.keyCode === 58){$(".spell10").trigger('click');}
-  if (event.keyCode === 59){$(".spell11").trigger('click');}
-  if (event.keyCode === 60){$(".spell12").trigger('click');}
-  if (event.keyCode === 61){$(".spell13").trigger('click');}
-});
 
+function resetplayerstats(){
 
+ player.buffHealth = 0;
+ player.buffMana = 0;
+ player.buffDodge = 0;
+ player.buffMagicPow = 0;
+ player.buffDamage = 0;
+ player.buffIceDMG = 0;
+ player.buffFireDMG = 0;
+ player.buffStormDMG = 0;
+ player.buffBloodDMG = 0;
+ player.buffCritical = 0;
+ player.buffShadowDMG = 0;
+ player.buffNatureDMG = 0;
+ player.nerfHealPow = 0;
 
-function resetplayerstats(){  
- buffHealth = 0;
- buffMana = 0;
- buffDodge = 0;
- buffMagicPow = 0;
- buffDamage = 0;
- buffIceDMG = 0;
- buffFireDMG = 0;
- buffStormDMG = 0;
- buffBloodDMG = 0;
- buffCritical = 0;
- buffShadowDMG = 0;
- buffNatureDMG = 0;
- nerfHealPow = 0;
+ player.nerfHealth = 0;
+ player.nerfMana = 0;
+ player.nerfDodge = 0;
+ player.nerfMagicPow = 0;
+ player.nerfDamage = 0;
+ player.nerfIceDMG = 0;
+ player.nerfFireDMG = 0;
+ player.nerfStormDMG = 0;
+ player.nerfBloodDMG = 0;
+ player.nerfCritical = 0;
+ player.nerfShadowDMG = 0;
+ player.nerfNatureDMG = 0;
+ player.nerfHealPow = 0;
 
- nerfHealth = 0;
- nerfMana = 0;
- nerfDodge = 0;
- nerfMagicPow = 0;
- nerfDamage = 0;
- nerfIceDMG = 0;
- nerfFireDMG = 0;
- nerfStormDMG = 0;
- nerfBloodDMG = 0;
- nerfCritical = 0;
- nerfShadowDMG = 0;
- nerfNatureDMG = 0;
- nerfHealPow = 0;   
 }
 
 
@@ -1493,8 +1795,8 @@ function reloadeverything(){
       var itemid1 = itemidcount1 + "S";
       if (jQuery.isEmptyObject(inventory[invcount1])===false) {
         var allclasses1 = "item sprite " + inventory[invcount1]["icon"] + " " + inventory[invcount1]['rarity'];
-        $(itemidcount1).append("<img id='" + itemid1 + "'class='" + allclasses1 + "' '></img>");        
-       
+        $(itemidcount1).append("<img id='" + itemid1 + "'class='" + allclasses1 + "' '></img>");
+
       }
     }
 // we also load character items
@@ -1502,27 +1804,30 @@ function reloadeverything(){
       var itemslot1= slotplayernames[x];
       var itemid1 = "#" + slotplayernames[x];
       var newid1="#c"+x;
-     
+
      if (jQuery.isEmptyObject(player[itemslot1])===false) {
         var allclasses1 = "item sprite " + player[itemslot1]["icon"] + " " + player[itemslot1]['rarity'];
-        $(itemid1).append("<img id='" +newid1+ "'class='" + allclasses1 + "' '></img>");        
-       
+        $(itemid1).append("<img id='" +newid1+ "'class='" + allclasses1 + "' '></img>");
+
       }
     }
-  
-  
+
+
 }
 
 
-setInterval(checkexp,15000);
-setInterval(countplayerstats, 2000);
 
 
-function save() {  
+
+setInterval(checkexp,20000);
+setInterval(countplayerstats, 1000);
+
+
+function save() {
   var save = {
     player1: player,
-    inventory1: inventory, 
-    boss1: boss,   
+    inventory1: inventory,
+    boss1: boss,
   }
   localStorage.setItem("save", JSON.stringify(save));
 }
@@ -1530,18 +1835,21 @@ function save() {
 function load() {
 
   var savegame = JSON.parse(localStorage.getItem("save"));
-  setInterval(addsummon,player.summoninterval);
+   var basicint = setInterval(addsummon,10000);
 
   if (savegame != null && savegame != undefined){
+  clearInterval(basicint);
   inventory = savegame.inventory1;
   player = savegame.player1;
   resetplayerstats();
   reloadeverything();
   countplayerstats();
-  displaystats();  
+  displaystats();
   boss = savegame.boss1;
   $("#bosslevel").text("LVL: "+boss.level);
-  $("#summons").text("1 spawn per: "+Math.floor(player.summoninterval/10000)+"minutes");
+  $("#summons").text("1 spawn per: "+Math.floor(player.summoninterval/10000)+"min");
+  setInterval(addsummon,player.summoninterval);
+
 }
 
 

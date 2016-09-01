@@ -1,4 +1,4 @@
-#main {
+html {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -15,10 +15,13 @@
   margin-top: 5px;
 
 }
-
+.danger{
+  color:red;
+}
 #sellalldiv{
-padding-top:75px;
+padding-top:2px;
 margin:0 auto;
+margin-top:10px;
 
 }
 #sellall{
@@ -28,8 +31,8 @@ width:300px;
 
 #textstats{
 position:absolute;
-margin-top:80px;
-margin-left:30px;
+margin-top:20px;
+margin-left:10px;
 }
 
 #upgradeinfo{
@@ -39,18 +42,19 @@ margin-left:30px;
   margin-left:90px;
   margin-top:200px;
   padding:10px;
+  float:left;
  }
 
 #buttonwrapper{
   margin:0 auto;
-  width:666px;
+  width:566px;
   padding:5px;
-  
+
 }
 
 #summonbuttons{
     margin:0 auto;
-  width:656px;
+  width:556px;
   margin-top:35px;
 }
 #bosslevel{
@@ -100,7 +104,7 @@ position:absolute;
   color: #ff8000;
 }
 
-#barnum {
+.barnum {
   position: absolute;
 }
 
@@ -202,10 +206,12 @@ p {
 
 #boxy {
   width: 865px;
-  height: 216px;
+  height: 163px;
   background: url("http://res.cloudinary.com/treborx555/image/upload/v1472066255/texture_xhoaxc.png");
   border: 10px solid #333;
-  margin-left: 38px;
+  margin-left: 46px;
+  margin-top:125px;
+  padding-top:5px;
 }
 
 #box {
@@ -216,7 +222,7 @@ p {
 
 #screen {
   width: 865px;
-  height: 381px;
+  height: 300px;
   background-color: #24303E;
   border: 10px solid #333;
   position: block;
@@ -263,17 +269,87 @@ p {
 
 .spellslot {
   border: 3px solid #333;
+  border-right:10px solid ;
   background-color: #24303E;
   width: 60px;
   height: 60px;
+  float:left;
+
 }
 
-#spellslots {
-  border: 3px solid teal;
-  outline: 5px solid #333;
+.fire{
+  color:orange;
+}
+
+.blood{
+  color:red;
+}
+.ice{
+  color:blue;
+}
+.storm{
+  color:yellow;
+}
+.nature{
+  color:green;
+}
+.dodge{
+  color:green;
+}
+
+.fire{
+  color:orange;
+}
+
+
+
+.BloodDMG{
+  color:red;
+}
+.IceDMG{
+  color:blue;
+}
+.StormDMG{
+  color:yellow;
+}
+.NatureDMG{
+  color:green;
+}
+.ShadowDMG{
+  color:purple;
+}
+.FireDMG{
+  color:orange;
+}
+.MagicPow{
+  color:pink;
+}
+.HealPow{
+  color:yellow;
+}
+
+#spells{
+  background-color:#24303E;
+  border-left:10px solid #333;
+  border-right:10px solid #333;
+  top:310px;
+  width:865px;
+  margin-left:239px;
+
+  height:auto;
+  position:absolute;
+
+}
+#spellslots{
   margin: 0 auto;
 }
 
+#infodiv{
+  position:absolute;
+  left:822px;
+  top:-305px;
+
+}
 .item {
   max-width: 45px;
   max-height: 45px;
@@ -288,11 +364,19 @@ body {
   background-color: #222;
   width: 100%;
   height: 100vh;
-  background: url("https://upload.wikimedia.org/wikipedia/commons/a/a2/San_Raphael_Grasslands_(4412326574).jpg");
+  background: url("http://res.cloudinary.com/treborx555/image/upload/v1472724902/photo-1457903685934-249e8108a246_v8ugfn.jpg");
   background-size: 100vw;
   max-height: 765px;
   max-width: 1366px;
   margin: 0 auto;
+}
+#powerleveldiv{
+  position:absolute;
+  margin-top:350px;
+  margin-left:90px;
+  width:210px;
+  height:50px;
+
 }
 
 table {
@@ -337,15 +421,15 @@ table {
 
 #totalplayerhpbar {
   width: 845px;
-  height: 20px; 
+  height: 20px;
   background-color: black;
   }
 
 #totalplayermanabar {
   width: 845px;
-  height: 20px;  
+  height: 20px;
   background-color: black;
- 
+
   }
 
 
@@ -355,7 +439,7 @@ table {
   background: url("http://res.cloudinary.com/treborx555/image/upload/v1472309979/dblue168_zjpw0l.jpg");
   background-size:150px;
   border:5px solid #333;
-  
+
   top:0;
 }
 #playerhpbar {
@@ -363,21 +447,21 @@ table {
   height: 20px;
   background: url("http://res.cloudinary.com/treborx555/image/upload/v1472309979/red_ukpo3h.jpg");
   background-size:150px;
-  border:5px solid #333;  
-  
+  border:5px solid #333;
+
 
 }
 #leftinfo{
   height:180px;
-  width:300px; 
+  width:300px;
   border:5px solid #333;
   overflow-y:scroll;
   margin-top:15px;
   float:left;
-  
+
 }
-::-webkit-scrollbar { 
-    display: none; 
+::-webkit-scrollbar {
+    display: none;
 }
 #rightinfo{
 
@@ -401,7 +485,10 @@ table {
 }
 
 #character {
-  float: right;
+  position:absolute;
+  margin-top:380px;
+  margin-left:83px;
+  width:220px;
 }
 
 .sprite {

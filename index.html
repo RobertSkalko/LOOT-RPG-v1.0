@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8">
     <title>RPG Loot Game</title>
-    
-    
-    
+
+
+
     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
 
         <link rel="stylesheet" href="css/style.css">
 
-    
-    
-    
+
+
+
   </head>
 
   <body>
@@ -68,7 +68,7 @@
 
 
       <div class="col-xs-3" id="playerstats">
-       
+
         <table id="stattable">
           <tr>
             <td class="statsprite -health"></td>
@@ -76,7 +76,7 @@
             <td class="statnum"><p id="ice"></p></td>
             <td class="statsprite -ice"></td>
             </tr>
-            
+
              <tr>
             <td class="statsprite -mana"></td>
             <td class="statnum"><p id="mana"></p></td>
@@ -114,11 +114,11 @@
             <td class="statsprite -lifesteal"></td>
 
                </tr>
-          
-          
+
+
         </table>
-      
-      
+
+
       </div>
 
     </div>
@@ -130,22 +130,22 @@
       <div id="screen">
 
         <div id="battle">
-          
-          <div id="totalbosshpbar">          
-          
+
+          <div id="totalbosshpbar">
+
           <div id="bosshpbar"></div>
           </div>
-          
+
 
            <div  class="col-xs-2" id="leftinfo"></div>
 
           <div style="text-align: right;" class="col-xs-2" id="rightinfo"></div>
 
 
-            
 
-          
-           
+
+
+
           <p id="bosshptext" class="text-center">Boss Health</p>
 
           <p id="bosslevel">LVL</p>
@@ -155,83 +155,37 @@
 
 
 
-       
+
 
             <div class="" id="totalplayerhpbar"><div  id="playerhpbar"></div></div>
 
-            <div class="" id="totalplayermanabar"><div  id="playermanabar"></div></div> 
+            <div class="" id="totalplayermanabar"><div  id="playermanabar"></div></div>
 
-        
-        
+
+
         </div>
 
-        <div id="spells">
 
-         <table id="spellslots">
-            <tr>
 
-              
-<td class="spellslot inventory "><p id="barnum">1</p><div id="bar1"class="">
-<img class="spellsprite spell1 -basic" id="basic"></img></div></td>
 
-<td class="spellslot inventory "><p id="barnum">2</p><div id="bar2"class="spellbar">
-<img class="spellsprite spell2 -ice-1" id="icebolt"></img></div></td>
 
-<td class="spellslot inventory "><p id="barnum">3</p><div id="bar3"class="spellbar">
-<img class="spellsprite spell3 -fire-3" id="firebolt"></img></div></td>
-
-<td class="spellslot inventory "><p id="barnum">4</p><div id="bar4"class="spellbar">
-<img class="spellsprite spell4 -lightning-2" id="stormbolt"></img></div></td>
-
-<td class="spellslot inventory "><p id="barnum">5</p><div id="bar5"class="spellbar">
-<img class="spellsprite spell5 -nature-4" id="thorns"></img></div></td>
-
-<td class="spellslot inventory "><p id="barnum">6</p><div id="bar6"class="spellbar">
-<img class="spellsprite spell6 -shadow-1" id="shadowbolt"></img></div></td>
-
-<td class="spellslot inventory "><p id="barnum">7</p><div id="bar7"class="spellbar">
-<img class="spellsprite spell7 -blood-2" id="bloodstrike"></img></div></td>
-
-<td class="spellslot inventory "><p id="barnum">8</p><div id="bar8"class="spellbar">
-<img class="spellsprite spell8 -heal-2" id="heal"></img></div></td>
-
-<td class="spellslot inventory "><p id="barnum">9</p><div id="bar9"class="spellbar">
-<img class="spellsprite spell9 -defend-3" id="shield"></img></div></td>
-
-<td class="spellslot inventory "><p id="barnum">10</p><div id="bar10"class="spellbar">
-<img class="spellsprite spell10 -support-2" id="manarestore"></img></div></td>
-
-<td class="spellslot inventory "><p id="barnum">11</p><div id="bar11"class="spellbar">
-<img class="spellsprite spell11 -nature-2" id="natureheal"></img></div></td>
-
-<td class="spellslot inventory "><p id="barnum">12</p><div id="bar12"class="spellbar">
-<img class="spellsprite spell12 -shadow-3" id="buffmagic"></img></div></td>
-
-       
-
-            </tr>
-          </table>
-        </div>
-
-      </div>
 
       <div class="col-xs-6 col-xs-pull-1" id="box">
 
         <div id="boxy">
-          
+
      <div id="buttonwrapper">
-          
+
  <div class="col-xs-4"  id="bosslevelminus"><button id="minus" class="btn btn-block btn-warning">Boss Level Decrease</button></div>
 
- <div class="col-xs-4" id="fightbuttondiv"><button id="fightbutton" class="btn btn-block btn-success">FIGHT BOSS!</button></div>           
+ <div class="col-xs-4" id="fightbuttondiv"><button id="fightbutton" class="btn btn-block btn-success">FIGHT BOSS!</button></div>
 
  <div class="col-xs-4"  id="bosslevelplus"><button id="plus" class="btn  btn-block btn-warning">Boss Level Increase</button></div>
 </div>
-
 <div id="summonbuttons">
  <div class="col-xs-4"  id="summonslower"><button id="minus" class="btn btn-block btn-warning">Slower Boss spawn</button></div>
 
- <div class="col-xs-4" id="summonsdiv"><button id="summons" class="btn btn-block btn-success">1 spawn per: 1 minute</button></div>           
+ <div class="col-xs-4" id="summonsdiv"><button id="summons" class="btn btn-block btn-success">1 spawn per: 1 minute</button></div>
 
  <div class="col-xs-4"  id="summonfaster"><button id="plus" class="btn  btn-block btn-warning">Faster Boss spawn</button></div>
 </div>
@@ -250,12 +204,12 @@
 
 <div id="sellalldiv" class="col-xs-12"><button id="sellall" class="btn btn-block btn-danger">Sell all inventory!</button></div>
 
- </div> 
-          
+ </div>
 
-          
-          </div>  
-          
+
+
+          </div>
+
         </div>
 
       </div>
@@ -271,6 +225,8 @@
 
 
        <div class="text-center" id="upgradeinfo"></div>
+
+      <div id="powerleveldiv"> <p class="text-center" id="powerlevel"></p></div>
 
       <table id="character">
 
@@ -305,21 +261,120 @@
     </div>
 
 
+
+
   </div>
- 
-  
 
 
+
+            <div id="spells">
+
+             <table id="spellslots">
+                <tr>
+
+
+    <td class="spellslot inventory "><p class="barnum">1</p><div id="bar1"class="">
+    <img class="spellsprite spell1 -basic" id="basic"></img></div></td>
+
+    <td class="spellslot inventory "><p class="barnum">2</p><div id="bar2"class="spellbar">
+    <img class="spellsprite spell2 -ice-1" id="icebolt"></img></div></td>
+
+    <td class="spellslot inventory "><p class="barnum">3</p><div id="bar3"class="spellbar">
+    <img class="spellsprite spell3 -fire-3" id="firebolt"></img></div></td>
+
+    <td class="spellslot inventory "><p class="barnum">4</p><div id="bar4"class="spellbar">
+    <img class="spellsprite spell4 -lightning-2" id="stormbolt"></img></div></td>
+
+    <td class="spellslot inventory "><p class="barnum">5</p><div id="bar5"class="spellbar">
+    <img class="spellsprite spell5 -nature-4" id="thorns"></img></div></td>
+
+    <td class="spellslot inventory "><p class="barnum">6</p><div id="bar6"class="spellbar">
+    <img class="spellsprite spell6 -shadow-1" id="shadowbolt"></img></div></td>
+
+    <td class="spellslot inventory "><p class="barnum">7</p><div id="bar7"class="spellbar">
+    <img class="spellsprite spell7 -blood-2" id="bloodstrike"></img></div></td>
+
+    <td class="spellslot inventory "><p class="barnum">8</p><div id="bar8"class="spellbar">
+    <img class="spellsprite spell8 -heal-2" id="heal"></img></div></td>
+
+    <td class="spellslot inventory "><p class="barnum">9</p><div id="bar9"class="spellbar">
+    <img class="spellsprite spell9 -defend-3" id="shield"></img></div></td>
+
+    <td class="spellslot inventory "><p class="barnum">10</p><div id="bar10"class="spellbar">
+    <img class="spellsprite spell10 -defend-6" id="defenseheal"></img></div></td>
+
+    <td class="spellslot inventory "><p class="barnum">11</p><div id="bar11"class="spellbar">
+    <img class="spellsprite spell11 -support-2" id="manarestore"></img></div></td>
+
+    <td class="spellslot inventory "><p class="barnum">12</p><div id="bar12"class="spellbar">
+    <img class="spellsprite spell12 -shadow-3" id="buffmagic"></img></div></td>
+
+
+                </tr>
+
+
+                <tr>
+
+
+
+
+    <td class="spellslot inventory "><p class="barnum"></p><div id="bar13"class="">
+    <img class="spellsprite  -support-4" id="magebuff"></img></div></td>
+
+    <td class="spellslot inventory "><p class="barnum"></p><div id="bar14"class="spellbar">
+    <img class="spellsprite -ice-3" id="icebuff"></img></div></td>
+
+    <td class="spellslot inventory "><p class="barnum"></p><div id="bar15"class="spellbar">
+    <img class="spellsprite  -fire-5" id="firebuff"></img></div></td>
+
+    <td class="spellslot inventory "><p class="barnum"></p><div id="bar16"class="spellbar">
+    <img class="spellsprite -lightning-6" id="stormbuff"></img></div></td>
+
+    <td class="spellslot inventory "><p class="barnum"></p><div id="bar17"class="spellbar">
+    <img class="spellsprite  -nature-2" id="natureheal"></img></div></td>
+
+    <td class="spellslot inventory "><p class="barnum"></p><div id="bar18"class="spellbar">
+    <img class="spellsprite  -shadow-2" id="shadowbuff"></img></div></td>
+
+    <td class="spellslot inventory "><p class="barnum"></p><div id="bar19"class="spellbar">
+    <img class="spellsprite  -blood-3" id="bloodsap"></img></div></td>
+
+    <td class="spellslot inventory "><p class="barnum"></p><div id="bar20"class="spellbar">
+    <img class="spellsprite  -heal-3" id="healwings"></img></div></td>
+
+    <td class="spellslot inventory "><p class="barnum"></p><div id="bar21"class="spellbar">
+    <img class="spellsprite  -defend-5" id="helmet"></img></div></td>
+
+    <td class="spellslot inventory "><p class="barnum"></p><div id="bar22"class="spellbar">
+    <img class="spellsprite  -blood-6" id="attackbuff"></img></div></td>
+
+    <td class="spellslot inventory "><p class="barnum"></p><div id="bar22"class="spellbar">
+    <img class="spellsprite  -support-5" id="lotus"></img></div></td>
+
+    <td class="spellslot inventory "><p class="barnum"></p><div id="bar24"class="spellbar">
+    <img class="spellsprite  -support-6" id="magicattack"></img></div></td>
+
+
+
+                </tr>
+              </table>
+            </div>
+
+          </div>
+
+
+</div>
 
 <div id="showdiv">
   <button class="btn btn-block btn-success" id="equip">Equip</button>
-  <button class="btn btn-block btn-info" id="upgrade">Upgrade!</button> 
-  <button class="btn btn-block btn-warning" id="sell">Sell</button> 
+  <button class="btn btn-block btn-info" id="upgrade">Upgrade!</button>
+  <button class="btn btn-block btn-warning" id="sell">Sell</button>
 </div>
 
 
 <div id="showdiv1">
-  <button class="btn btn-block btn-success" id="unequip">Unequip</button> 
+  <button class="btn btn-block btn-success" id="unequip">Unequip</button>
+  <button class="btn btn-block btn-info" id="upgradeitemonchar">Upgrade!</button>
 </div>
 
 
@@ -392,10 +447,15 @@
 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
 
+
         <script src="js/index.js"></script>
 
-    
-    
-    
+
+
+
+
+
+
+
   </body>
 </html>
