@@ -12,8 +12,8 @@ Now about the game, some important things to know:
 - All item stats are 100% random, but you can't have 2 of the same stats in 1 item, except if 1st is normal stat and 2nd is upgrade
 stat
 - Upgrade can change existing stat and use up the upgrade gold, this was made instead of a fail chance
-- Max upgrade level is 5
-- spell costs are per boss level
+- Max upgrade level is 4
+- spell costs are per boss level usually but some cost current or total mana
 - you start with 30 boss summons, then each one takes a specified amount of time of game staying open, you can modify this
 - you can right click any spell for description
 - use right click and left click to manipulate items, they can only be upgraded while in inventory
